@@ -1,0 +1,105 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+ISSUES=0
+
+line() {
+  echo "----------------------------------"
+}
+
+ok() {
+  echo "OK      $1"
+}
+
+warn() {
+  echo "WARN    $1"
+  ISSUES=$((ISSUES + 1))
+}
+
+check_bin() {
+  name="$1"
+  if command -v "$name" >/dev/null 2>&1; then
+    ok "$name found -> $(command -v "$name")"
+  else
+    warn "$name missing"
+  fi
+}
+
+check_dir() {
+  path="$1"
+  if [[ -d "$path" ]]; then
+    ok "dir exists: $path"
+  else
+    warn "dir missing: $path"
+  fi
+}
+
+check_file() {
+  path="$1"
+  if [[ -f "$path" ]]; then
+    ok "file exists: $path"
+  else
+    warn "file missing: $path"
+  fi
+}
+
+echo "=================================="
+echo " UNIVERSAL DRAGON - NOVA DOCTOR"
+echo "=================================="
+echo "Root: $ROOT"
+line
+
+echo "[CORE COMMANDS]"
+check_bin nova
+check_bin novaterm
+check_bin novatool
+check_bin novaadapter
+check_bin novabackup
+check_bin novarestore
+check_bin novareport
+line
+
+echo "[DIRECTORIES]"
+check_dir "$ROOT"
+check_dir "$ROOT/memory"
+check_dir "$ROOT/tools"
+check_dir "$ROOT/apps"
+check_dir "$ROOT/store"
+check_dir "$ROOT/backups"
+check_dir "$ROOT/restore-preview"
+line
+
+echo "[MEMORY FILES]"
+check_file "$ROOT/memory/history.txt"
+check_file "$ROOT/memory/memory.txt"
+check_file "$ROOT/NOVA_LANGUAGE_STACK_v0.1.md"
+line
+
+echo "[ADAPTERS]"
+if command -v novaadapter >/dev/null 2>&1; then
+  novaadapter status
+else
+  warn "novaadapter not available"
+fi
+line
+
+echo "[BACKUP STATUS]"
+if command -v novabackup >/dev/null 2>&1; then
+  novabackup count
+  novabackup latest
+else
+  warn "novabackup not available"
+fi
+line
+
+echo "[LATEST HISTORY]"
+tail -n 8 "$ROOT/memory/history.txt" 2>/dev/null || warn "history not readable"
+line
+
+if [[ "$ISSUES" -eq 0 ]]; then
+  echo "NOVA DOCTOR RESULT: GREEN"
+  echo "System looks healthy."
+else
+  echo "NOVA DOCTOR RESULT: YELLOW"
+  echo "Issues found: $ISSUES"
+fi

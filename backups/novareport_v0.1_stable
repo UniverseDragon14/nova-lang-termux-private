@@ -1,0 +1,42 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+
+echo "=================================="
+echo " UNIVERSAL DRAGON - NOVA REPORT"
+echo "=================================="
+echo "Creator : Aslam"
+echo "Project : Universal Dragon"
+echo "Core    : NOVA"
+echo "Mode    : Tool-Language Ecosystem"
+echo
+
+echo "[PATHS]"
+echo "ROOT    : $ROOT"
+echo "TOOLS   : $ROOT/tools"
+echo "APPS    : $ROOT/apps"
+echo "STORE   : $ROOT/store"
+echo "BACKUPS : $ROOT/backups"
+echo
+
+echo "[ADAPTERS]"
+novaadapter status
+echo
+
+echo "[TOOLS]"
+novatool list
+echo
+
+echo "[APPS]"
+nova app list
+echo
+
+echo "[BACKUPS]"
+novabackup count
+novabackup latest
+echo
+
+echo "[LATEST HISTORY]"
+tail -n 12 "$ROOT/memory/history.txt" 2>/dev/null
+echo
+echo "REPORT COMPLETE"

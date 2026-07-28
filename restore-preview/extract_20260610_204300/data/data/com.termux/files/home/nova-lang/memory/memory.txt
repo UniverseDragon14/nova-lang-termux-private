@@ -1,0 +1,38 @@
+Universal Dragon = project
+NOVA = brain
+Brain first. Robot later.
+NOVA language approval bug fixed
+NOVA v0.3 fixed after old hook removed
+NOVA language spec v0.1 created
+NOVA v0.4 safety engine installed
+NOVA shell mode first live test
+NOVA v0.5 module backbone installed
+Module memory-core created inside NOVA v0.5
+NOVA v0.5 stable. Module backbone, course system, history and backup working.
+NOVA v0.6 store seed installed
+hello app launched from NOVA Store
+NOVA-Q quantum research branch v0.1 created
+NOVABIT concept locked inside NOVA-Q. Tamil-speaking computer later, not now.
+NOVABIT Lab v0.1 installed as NOVA-Q simulator seed
+NOVA-Q paused. Focus returned to NOVA Tool Factory. NOVATOOL v0.1 installed.
+NOVATOOL v0.1.1 hash guard fix installed
+Tool backup-tool executed through NOVA Tool Factory
+NOVA v0.6.1 language-dev mode. Hash guard disabled. Grammar/parser remains.
+Tool backup-tool executed through NOVA Tool Factory
+Universal Dragon core meaning locked. NOVA is tool-language, not police. Universe means expanding possibility field, Dragon means handle/control direction force.
+NOVATOOL v0.2 tool grammar installed. Tool creation, code view, run, pack and publish working.
+Status tool status-tool executed
+Status tool status-tool executed
+Today NOVA evolved from command runner to tool-language ecosystem: memory, history, modules, store seed, NOVATOOL factory and NOVA-Q research branch documented.
+NOVATERM v0.1 installed. NOVA now has a first terminal shell seed.
+NOVATERM v0.1 tested successfully. dragon prompt, identity, tool list, history, backup and exit working.
+NOVATERM v0.2 shortcut terminal installed. Tools, apps, run, install, publish, code, where and version shortcuts added.
+Status tool status-tool executed
+hello app launched from NOVA Store
+NOVATERM v0.2 tested successfully. Shortcut terminal commands version, where, tools, apps, run, install, history and backup working.
+NOVATERM v0.2 tested successfully. Shortcut terminal commands version, where, tools, apps, run, install, history and backup working.
+NOVATERM v0.3 installed. Alias system, short commands, command memory, repeat last and cleaner prompt added.
+NOVATERM v0.3 tested after room return. Alias, memory, shortcut and backup flow confirmed.
+NOVATERM v0.3 tested successfully after room return. Alias ss, shortcuts, last command memory and repeat command working.
+NOVA backup fixed to exclude backups folder, node_modules and git folder.
+NOVA backup fast fix verified. Backup now excludes backups folder, node_modules and git folder.

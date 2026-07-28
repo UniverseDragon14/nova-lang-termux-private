@@ -1,0 +1,135 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+ADAPTERS="$ROOT/adapters"
+HIST="$ROOT/memory/history.txt"
+
+mkdir -p "$ADAPTERS" "$ROOT/memory"
+touch "$HIST"
+
+log_it() {
+  echo "$(date '+%Y-%m-%d %H:%M:%S') | NOVAADAPTER $1" >> "$HIST"
+}
+
+has_cmd() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+status_one() {
+  name="$1"
+  cmd="$2"
+
+  if has_cmd "$cmd"; then
+    echo "READY  $name  -> $(command -v "$cmd")"
+  else
+    echo "MISSING $name  -> install later"
+  fi
+}
+
+help_menu() {
+  echo "NOVAADAPTER v0.1"
+  echo "Commands:"
+  echo "  novaadapter status"
+  echo "  novaadapter map"
+  echo "  novaadapter test bash"
+  echo "  novaadapter test python"
+  echo "  novaadapter test js"
+  echo "  novaadapter test c"
+  echo "  novaadapter test cpp"
+  echo "  novaadapter test rust"
+  echo "  novaadapter test java"
+}
+
+show_map() {
+  cat <<'EOF'
+NOVA Adapter Map:
+
+Human intent
+ -> NOVA language
+ -> NOVA parser/runtime
+ -> Adapter chooser
+ -> backend engine
+
+Adapters:
+- Bash       = system / Termux commands
+- Python     = helper / AI experiments
+- JavaScript = web/app logic
+- C          = low-level fast core
+- C++        = system/app engine
+- Rust       = safer fast core
+- Java       = Android/backend bridge later
+- 1/0        = final hardware signal reality
+EOF
+}
+
+status_all() {
+  echo "NOVA Adapter Status:"
+  status_one "Bash" bash
+  status_one "Python" python
+  status_one "NodeJS" node
+  status_one "C clang" clang
+  status_one "C++ g++" g++
+  status_one "Rust" rustc
+  status_one "Java" java
+}
+
+test_adapter() {
+  case "$1" in
+    bash)
+      echo "Bash adapter OK"
+      ;;
+    python)
+      if has_cmd python; then python - <<'PY'
+print("Python adapter OK")
+PY
+      else echo "Python missing"; fi
+      ;;
+    js)
+      if has_cmd node; then node -e 'console.log("JavaScript adapter OK")'
+      else echo "NodeJS missing"; fi
+      ;;
+    c)
+      if has_cmd clang; then
+        tmp="$ADAPTERS/test_c"
+        echo '#include <stdio.h>
+int main(){printf("C adapter OK\n");return 0;}' > "$tmp.c"
+        clang "$tmp.c" -o "$tmp" && "$tmp"
+      else echo "clang missing"; fi
+      ;;
+    cpp)
+      if has_cmd g++; then
+        tmp="$ADAPTERS/test_cpp"
+        echo '#include <iostream>
+int main(){std::cout<<"C++ adapter OK\n";return 0;}' > "$tmp.cpp"
+        g++ "$tmp.cpp" -o "$tmp" && "$tmp"
+      else echo "g++ missing"; fi
+      ;;
+    rust)
+      if has_cmd rustc; then
+        tmp="$ADAPTERS/test_rust"
+        echo 'fn main(){println!("Rust adapter OK");}' > "$tmp.rs"
+        rustc "$tmp.rs" -o "$tmp" && "$tmp"
+      else echo "rustc missing"; fi
+      ;;
+    java)
+      if has_cmd java && has_cmd javac; then
+        tmp="$ADAPTERS/NovaJavaTest"
+        echo 'class NovaJavaTest { public static void main(String[] args){ System.out.println("Java adapter OK"); }}' > "$tmp.java"
+        javac "$tmp.java" && java -cp "$ADAPTERS" NovaJavaTest
+      else echo "java/javac missing"; fi
+      ;;
+    *)
+      echo "Unknown adapter. Use: bash/python/js/c/cpp/rust/java"
+      ;;
+  esac
+
+  log_it "tested adapter $1"
+}
+
+case "$1" in
+  status|"") status_all ;;
+  map) show_map ;;
+  test) test_adapter "$2" ;;
+  help) help_menu ;;
+  *) echo "Unknown command. Use: novaadapter help" ;;
+esac

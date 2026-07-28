@@ -1,0 +1,60 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+B="$ROOT/backups"
+PREVIEW="$ROOT/restore-preview"
+
+mkdir -p "$B" "$PREVIEW"
+
+latest_tar() {
+  find "$B" -maxdepth 1 -type f -name "*.tar.gz" -printf "%T@ %p\n" 2>/dev/null | sort -nr | head -n 1 | cut -d' ' -f2-
+}
+
+help_menu() {
+  echo "NOVARESTORE v0.1 - Preview Only"
+  echo "Commands:"
+  echo "  novarestore help"
+  echo "  novarestore latest"
+  echo "  novarestore preview"
+  echo "  novarestore preview backup_file.tar.gz"
+  echo "  novarestore extract"
+  echo "  novarestore path"
+}
+
+case "$1" in
+  help|"")
+    help_menu
+    ;;
+  latest)
+    echo "Latest tar backup:"
+    latest_tar
+    ;;
+  preview)
+    file="$2"
+    [[ -z "$file" ]] && file="$(latest_tar)"
+    [[ ! -f "$file" && -f "$B/$file" ]] && file="$B/$file"
+    [[ ! -f "$file" ]] && echo "Backup not found." && exit 1
+
+    echo "Preview: $file"
+    echo "First 40 files:"
+    tar -tzf "$file" 2>/dev/null | head -n 40
+    ;;
+  extract)
+    file="$2"
+    [[ -z "$file" ]] && file="$(latest_tar)"
+    [[ ! -f "$file" && -f "$B/$file" ]] && file="$B/$file"
+    [[ ! -f "$file" ]] && echo "Backup not found." && exit 1
+
+    out="$PREVIEW/extract_$(date +%Y%m%d_%H%M%S)"
+    mkdir -p "$out"
+    tar -xzf "$file" -C "$out" 2>/dev/null
+    echo "Extracted preview to: $out"
+    echo "Nothing overwritten."
+    ;;
+  path)
+    echo "$PREVIEW"
+    ;;
+  *)
+    echo "Unknown command. Use: novarestore help"
+    ;;
+esac

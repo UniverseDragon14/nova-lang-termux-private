@@ -1,0 +1,1 @@
+dragon-note: writes a test note into NOVA memory.

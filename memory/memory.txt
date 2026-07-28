@@ -1,0 +1,171 @@
+Universal Dragon = project
+NOVA = brain
+Brain first. Robot later.
+NOVA language approval bug fixed
+NOVA v0.3 fixed after old hook removed
+NOVA language spec v0.1 created
+NOVA v0.4 safety engine installed
+NOVA shell mode first live test
+NOVA v0.5 module backbone installed
+Module memory-core created inside NOVA v0.5
+NOVA v0.5 stable. Module backbone, course system, history and backup working.
+NOVA v0.6 store seed installed
+hello app launched from NOVA Store
+NOVA-Q quantum research branch v0.1 created
+NOVABIT concept locked inside NOVA-Q. Tamil-speaking computer later, not now.
+NOVABIT Lab v0.1 installed as NOVA-Q simulator seed
+NOVA-Q paused. Focus returned to NOVA Tool Factory. NOVATOOL v0.1 installed.
+NOVATOOL v0.1.1 hash guard fix installed
+Tool backup-tool executed through NOVA Tool Factory
+NOVA v0.6.1 language-dev mode. Hash guard disabled. Grammar/parser remains.
+Tool backup-tool executed through NOVA Tool Factory
+Universal Dragon core meaning locked. NOVA is tool-language, not police. Universe means expanding possibility field, Dragon means handle/control direction force.
+NOVATOOL v0.2 tool grammar installed. Tool creation, code view, run, pack and publish working.
+Status tool status-tool executed
+Status tool status-tool executed
+Today NOVA evolved from command runner to tool-language ecosystem: memory, history, modules, store seed, NOVATOOL factory and NOVA-Q research branch documented.
+NOVATERM v0.1 installed. NOVA now has a first terminal shell seed.
+NOVATERM v0.1 tested successfully. dragon prompt, identity, tool list, history, backup and exit working.
+NOVATERM v0.2 shortcut terminal installed. Tools, apps, run, install, publish, code, where and version shortcuts added.
+Status tool status-tool executed
+hello app launched from NOVA Store
+NOVATERM v0.2 tested successfully. Shortcut terminal commands version, where, tools, apps, run, install, history and backup working.
+NOVATERM v0.2 tested successfully. Shortcut terminal commands version, where, tools, apps, run, install, history and backup working.
+NOVATERM v0.3 installed. Alias system, short commands, command memory, repeat last and cleaner prompt added.
+NOVATERM v0.3 tested after room return. Alias, memory, shortcut and backup flow confirmed.
+NOVATERM v0.3 tested successfully after room return. Alias ss, shortcuts, last command memory and repeat command working.
+NOVA backup fixed to exclude backups folder, node_modules and git folder.
+NOVA backup fast fix verified. Backup now excludes backups folder, node_modules and git folder.
+NOVABACKUP v0.1 installed. Backup list, count, latest and path commands added.
+NOVABACKUP v0.1.1 clean backup viewer installed. Latest, list, tar and stable views improved.
+NOVARESTORE v0.1 preview tool installed. It can preview and extract backups without overwriting live files.
+NOVA language stack v0.1 locked. Python is optional helper. Bash is current engine. C/C++/Rust are future strong runtime layers. 1/0 is machine reality.
+NOVA adapter principle locked. NOVA can use Bash, Python, C, C++, Rust, JavaScript, HTML and lower machine layers as backend workers.
+NOVAADAPTER v0.1 installed. NOVA can now map Bash, Python, JavaScript, C, C++, Rust and Java as backend workers.
+NOVAADAPTER v0.1 tested. Bash, Python, NodeJS, C, C++ and Java adapters ready. Rust missing for later install.
+Rust adapter installed and tested. NOVAADAPTER now has Bash, Python, NodeJS, C, C++, Rust and Java ready.
+Universal Dragon adapter army completed. Bash, Python, NodeJS, C, C++, Rust and Java are ready as NOVA backend workers.
+NOVAREPORT v0.1 installed. Universal Dragon can now show full NOVA system status in one command.
+Universal Dragon mission clarified. Tools can be misused by destructive people, but Aslam builds NOVA to handle, protect, organize, backup, restore and create safely without destroying the world.
+NOVATERM v0.4 installed. Report, adapters, map, backups, latest and restore preview shortcuts added.
+NOVATERM v0.4 tested. System report, adapter status, map, backup list, latest backup and restore preview shortcuts working.
+NOVA restored from v0.6.1 backup after accidental old v0.4 overwrite. System recovered and doctor green.
+NOVATERM v0.4.1 installed. Doctor shortcut added as doctor and d.
+NOVATERM v0.4.1 tested. Doctor shortcut working inside Dragon terminal.
+NOVARECOVER v0.1 installed. Stable core recovery switch added for accidental overwrites.
+NOVATERM v0.4.2 installed. Recover shortcut added and old v0.3 log label fixed.
+NOVATERM v0.4.2 tested. Recover shortcut, doctor shortcut, report and clean version log working.
+NOVAMANIFEST v0.1 installed. Universal Dragon can now generate a full project manifest document.
+NOVAMANIFEST v0.1 installed. Universal Dragon can now generate a full project manifest document.
+NOVAMANIFEST v0.1 tested. Manifest generated successfully with identity, paths, commands, adapters, tools, apps, backups and history.
+Termux NOVA Python Core v1.0 tested by Aslam
+Termux NOVA Python Core v1.0 mobile branch installed and tested while Pi5 is offline.
+Termux NOVA Python Core v1.1 installed. Doctor, manifest and export bundle working.
+Termux NOVA Python Core v1.2 installed. Export list and import preview working without overwriting live files.
+Termux NOVA Python Core v1.2.1 installed. Import preview uses safe tar filter and remains non-destructive.
+Termux NOVA Python Core v1.2.1 installed. Import preview uses safe tar filter and doctor is green.
+Termux NOVA Python Core v1.3 installed. Pi5 sync guide and syncpack created for later migration.
+Termux NOVA Python Core v1.3 installed. Pi5 sync guide and syncpack created for later migration.
+Termux NOVA Python Core v1.3 installed. Pi5 sync guide and syncpack created for later migration.
+Termux NOVA Python Core v1.3.1 installed. Synccheck verifies Pi5 sync pack contents and doctor label updated.
+Termux NOVA Python Core v1.3.1 final Pi5 syncpack regenerated and verified.
+Termux NOVA Python Core v1.3.1 final labels cleaned and Pi5 syncpack verified GREEN.
+Termux NOVA Python Core v1.3.1 pushed to GitHub Universal-Dragon-Core.
+NOVA LINK master key plan created. Remote control will use identity keys, signed commands, allowlist, logs, approval, and rollback for Aslam-owned devices only.
+NOVA LINK master key plan created. Remote control will use identity keys, signed commands, allowlist, logs, approval, and rollback for Aslam-owned devices only.
+NOVA LINK plan fixed. Docs folder created. Travel-mode remote control architecture saved.
+NOVA LINK v0.1 installed in Termux. Mobile commander can create signed command packets for Aslam-owned devices.
+Aslam Moving Control Room history saved. Travel time converted into NOVA LINK build time. Identity-based master key control planned for Aslam-owned devices.
+Aslam Moving Control Room history saved. NOVA LINK v0.1 created signed command packets from mobile Termux while traveling.
+Dragon Field Cable added to mobile control room kit. 100 AED cable reserved for Termux, Pi5 sync, NOVA LINK, emergency power, and field work.
+Curtain fixing work completed. Home Center customized curtain fitting looks good. Ready-made curtain quality and fitting not good compared to custom curtain.
+NOVA Packager starting from stable v1.3.1. Old v1.2 screenshots ignored.
+NOVA local Termux deb package built from stable v1.3.1 after fixing package folder permissions.
+NOVA local apt repository created. pkg install nova now works from local repo.
+NOVA will use Python as the mother engine, but will also use Bash, C, Rust, Node.js and SQLite as internal strong adapters. Goal is one NOVA language face with best tool per job.
+Terminal check paused. which command missing in Termux, use command -v nova instead. NOVA package install is still working.
+NOVA Adapter System v0.1 created. Bash, Python, Node, C, C++, Rust and Java ready. SQLite installing/checking.
+NOVA adapter shortcut installed as novaadapter. Next step is connect it inside main nova command as nova adapter.
+NOVA language file test working after adapter GREEN
+NOVA Adapter System GREEN. SQLite ready. nova run expects .nova files. novapy added for direct Python adapter test.
+NOVA QBIT adapter v0.1 created. NOVA now has symbolic qbit language commands: qbit, h, x, z, state, measure.
+NOVA launcher router v1.3.2 installed. Main nova command now routes adapter, py, and qbit engines under one command face.
+NOVA package v1.3.2 built. Local repo now stores router launcher with adapter, py, and qbit engines.
+NOVA local repo cleaned. Old nova_1.0 package removed. Repository now points only to nova v1.3.2 router package.
+NOVA Launcher Router v1.3.3 installed. nova run now selects qbit/python/node/bash/sql/nova by header or file extension.
+Universaldragon.com is the public headquarters for Universal Dragon. Goal: portfolio
+NOVA package v1.3.3 built. Universal Runner package includes router, py adapter, qbit adapter, adapter checker, and extension based engine routing.
+NOVA v1.3.3 package installed and tested GREEN. Universal Runner now works through dpkg package and local repo candidate check.
+NOVA v1.3.3 milestone complete. Mobile Termux field lab can build local packages, local repo, universal runner, QBIT adapter, Python adapter, and adapter status system.
+NOVA v1.3.3 GitHub sync completed. Package, repo Packages file, adapters, qbit test, and docs copied into ud-github-sync and pushed.
+NOVA v1.3.3 GitHub verification complete. Git clean, commit e4914c5 pushed, package and repo Packages file confirmed.
+NOVA v1.3.3 tagged as nova-v1.3.3 release checkpoint.
+NOVA v1.3.4-dev started from stable tagged v1.3.3. Goal: clean help, notes view, router polish, adapter report, package polish.
+NOVA v1.3.4-dev step 1 complete. Added nova notes and nova help route to launcher.
+NOVA v1.3.4-dev step 2 complete. Router label updated and routes list cleaned.
+NOVA v1.3.4-dev step 3 complete. Doctor now includes adapter status report.
+NOVA architecture rule: Python is mother engine and bootloader, not final identity. NOVA language face controls adapters: qbit, python, bash, node, sqlite, C, Rust, Java. Future goal is NOVA bytecode and stronger Rust/C core.
+NOVA v1.3.4-dev step 4 complete. Version label changed from Python-only core to Multi-Engine Tool-Language Runtime.
+NOVA v1.3.4-dev1 package repo updated and pushed to GitHub.
+NOVA v1.3.4-dev1 tagged after package, repo, GitHub push, doctor, adapter, qbit and py tests GREEN.
+NOVA v1.3.4-dev step 5 complete. Core and doctor labels updated from old v1.3.1 wording.
+NOVA v1.3.5-dev started. Goal: portable public installer and package that works on fresh Termux.
+NOVA v1.3.5-dev2 portable package GREEN. Fresh Termux simulation passed. QBIT, Python, doctor, adapter, auto-init working.
+NOVA v1.3.5-dev2 portable package GREEN. Fresh Termux simulation passed. QBIT, Python, doctor, adapter, auto-init working.
+NOVA v1.3.5-dev2 public repo install confirmed GREEN. pkg install nova works, doctor GREEN, qbit test GREEN.
+NOVA v1.3.5-dev2 public repo install confirmed GREEN. pkg install nova works, doctor GREEN, qbit test GREEN.
+Domain is registered in Cloudflare. Vercel is not domain owner. Safe plan: remove Vercel domains/projects first, keep Cloudflare DNS clean, then delete Vercel account if no longer needed.
+Vercel account deleted. Domain remains safe in Cloudflare. Next step: connect Cloudflare Pages to Universal-Dragon-Core docs for install.universaldragon.com.
+NOVA install index page added for Cloudflare Pages root route.
+NOVA install site LIVE GREEN. Cloudflare Pages project universal-dragon-nova deployed from nova-v1.3.5-dev docs folder. Custom domain https://install.universaldragon.com working.
+NOVA v1.3.5 site-live tag created. install.universaldragon.com is live and GitHub/Cloudflare Pages deployment is clean.
+install.universaldragon.com verified with HTTP/2 200. Cloudflare Pages production domain is GREEN.
+NOVA Language Vision V1 created and pushed. Universal Dragon NOVA will evolve from runtime foundation into a full custom programming language with lexer, parser, interpreter, standard library, QBIT layer, and future compiler path.
+NOVA v2 language engine seed created and pushed. First lexer/parser reads .nova files, recognizes brain, let, say, qbit, h, and measure commands, and outputs AST successfully.
+QBIT gates upgraded and pushed. NOVA v2 now supports state, prob, x, z, reset, h, and measure for symbolic quantum simulation.
+QBIT Z interference test pushed. H-Z-H sequence proved phase interference by converting
+QBIT Z interference test pushed. H-Z-H sequence proved phase interference by converting |0> into |1>, showing that phase can change final measurement through interference.
+QBIT H-Z-H equals X explanation added. The note explains how phase and interference convert |0> into |1>, showing why H-Z-H has the same final effect as X gate.
+QBIT CNOT entanglement simulator added. NOVA v2 now supports multi-qbit register, CNOT gate, Bell-style linked states, and matching measurement results.
+QBIT CNOT Bell state explanation added. The note explains how H on qbit a plus CNOT a b creates a Bell-style linked state where measurement gives 00 or 11.
+QBIT Bell repeat stability test added. The test ran Bell/CNOT measurement 20 times and confirmed only 00 and 11 appeared, with 01 and 10 staying zero.
+GitHub Actions QBIT tests added. NOVA QBIT tests will run automatically on push and pull request for the nova-v1.3.5-dev branch.
+README updated with NOVA QBIT GitHub Actions test badge and CI milestone. Repo front page now shows QBIT automated test status.
+Milestone tag nova-qbit-ci-green-v1 created. This locks NOVA QBIT v2 with CNOT, Bell repeat stability test, GitHub Actions CI, and README badge.
+NOVA v2.2 quantum-first syntax parser added. NOVA now understands intent, simulate, observe, guard, collapse, and QBIT-based decision grammar.
+Quantum-first syntax parser CI test added. GitHub Actions now checks NOVA v2.2 intent, simulate, guard, observe, and collapse syntax parsing.
+Milestone tag nova-v2.2-quantum-syntax-ci-green created. This locks NOVA v2.2 with QBIT simulation, Bell/CNOT proof, repeat stability test, quantum-first syntax parser, and GitHub Actions CI.
+WiFi check: phone connected on local IP 192.168.1.120, frequency 2412 MHz, link speed 175 Mbps, RSSI -38 strong signal, supplicant completed. SSID and BSSID hidden by Android privacy.
+NOVA provenance and ownership record added. Creator identity, Universal Dragon branding, QBIT milestone, CI proof, and long-term NOVA engine direction are now documented.
+Milestone tag nova-provenance-v1 created for NOVA ownership and evidence chain record.
+NOVA wrapper patched on Huawei Termux. nova run now routes .nova files to NOVA v2 engine, hiding Python from the user-facing command. QBIT Bell CNOT test passed through nova run.
+NOVA v2 wrapper installer added. Any device can patch nova run to route .nova files through the NOVA v2 engine while keeping NOVA as the user-facing command.
+NOVA v2 wrapper installer added. Any device can patch nova run to route .nova files through the NOVA v2 engine while keeping NOVA as the user-facing command.
+NOVA v2.2 intent syntax added. NOVA now supports intent blocks as the first Quantum-Intent Core language feature.
+NOVA v2.2 simulate block syntax added. NOVA now supports simulate target blocks with when value => result cases.
+NOVA v2.2 observe syntax added. NOVA can now collapse a qbit state into an observed decision value and store it for later guard/if logic.
+NOVA v2.2 guard syntax added. NOVA can now use observed qbit decision values to trigger safe guard actions such as rollback or access allowed messages.
+Milestone tag nova-quantum-intent-core-v1 created. NOVA v2.2 now supports intent, simulate, observe, guard, QBIT, CNOT, and safe decision syntax.
+Life principle locked: Do not lose today by waiting for tomorrow. If today falls, tomorrow can grow again. Do not leave justice because of yesterday’s pain. Move forward. Universal Dragon Aslam can rise.
+Vision principle locked: Since the beginning, humans looked at the sky and asked whether we are alone. Today we speak with AI and imagine virtual worlds. We may not simply go there; those worlds may come here through NOVA and EVE. Universal Dragon Aslam.
+Aslam workflow memory: Morning 8 AM to 5 PM mostly outside for curtain fixing work. Travel time can be around 5 hours and fixing work around 3 hours. Main working device is Huawei Termux. Raspberry Pi 5 server is used mainly in the room. Sunday is mostly room/Pi5 work day. Default support should prefer Termux first, Pi5 server when Aslam is in the room.
+NOVA Quantum-Intent Core test check added. Local test validates intent, simulate, observe, and guard syntax together.
+GitHub Actions updated to run both QBIT Bell repeat tests and NOVA Quantum-Intent Core tests for intent, simulate, observe, and guard.
+Milestone tag nova-quantum-intent-core-ci-green-v1 created after local and GitHub Actions tests passed for QBIT, Quantum-Intent Core, and quantum-first syntax parser.
+NOVA v2 patch syntax added. NOVA can now safely patch project files using patch path { replace old => new } syntax, blocking paths outside the project root.
+Python patching chapter closed. NOVA v2 patch syntax is now working, allowing NOVA to safely patch project files using patch path { replace old => new } syntax. Python remains only as hidden runtime for now.
+NOVA/QBIT WhatsApp voice and call decision example added. NOVA now decides safe call handling with CALL_SAFE_REPLY and OWNER_APPROVAL_REQUIRED branches before Node execution.
+NOVA WhatsApp voice and call decision contract documented. NOVA/QBIT remains the decision brain while Node executes only allowed WhatsApp actions.
+NOVA to Node WhatsApp adapter documented. Node must only execute safe actions based on NOVA/QBIT outputs and must not decide or auto-answer live calls.
+NOVA WhatsApp adapter output example added. NOVA now prints NODE_ACTION outputs for Node bridge execution.
+Milestone locked: NOVA/QBIT language now produces NODE_ACTION outputs and WhatsApp bridge can obey NOVA decisions through adapter v1.
+Proof document added for NOVA/QBIT WhatsApp adapter v1. Verification path now includes GitHub tag, adapter output, safety rules, and pending public demo/video proof.
+Milestone locked: NOVA/QBIT adapter contract v2 now outputs NODE_CHANNEL, NODE_ACTION, NODE_APPROVAL, and NODE_REASON for safe Node execution.
+Milestone locked: NOVA/QBIT adapter contract v3 now outputs channel, action, approval, risk, runtime permission, allowed status, and reason for safe WhatsApp Node execution.
+Milestone locked: NOVA/QBIT Universal Adapter Contract v1 outputs safe adapter execution fields and blocks raw runtime execution.
+NOVA/QBIT Language Specification v0.3 added with core keywords, adapter contract fields, safety rules, proof examples, and version file.
+NOVA/QBIT Grammar v0.3 added with program structure, statements, qbit syntax, simulate, observe, guard, patch, and adapter contract output grammar.
+NOVA/QBIT adapter contract tests added. WhatsApp contract v3 and Universal Adapter contract v1 are now automatically verified.
+NOVA/QBIT adapter contract tests added to GitHub Actions CI. WhatsApp contract v3 and Universal Adapter contract v1 now run in automated CI.
+README updated with NOVA/QBIT Language v0.3 overview, keywords, adapter contract fields, examples, tests, spec files, and safety direction.
+NOVA/QBIT v0.3 release manifest locked. This milestone includes spec, grammar, version, examples, adapter contracts, tests, CI, README, and tags.

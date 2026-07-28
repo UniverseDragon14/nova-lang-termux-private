@@ -1,0 +1,338 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+MEM="$ROOT/memory/memory.txt"
+HIST="$ROOT/memory/history.txt"
+HASH="$ROOT/memory/state.sha256"
+MODS="$ROOT/modules"
+STORE="$ROOT/store"
+APPS="$ROOT/apps"
+COURSE="$ROOT/course"
+SPEC="$ROOT/NOVA_LANGUAGE_SPEC_v0.6.md"
+ECO="$ROOT/UNIVERSAL_DRAGON_ECOSYSTEM.md"
+
+mkdir -p "$ROOT/memory" "$ROOT/backups" "$APPS" "$MODS" "$STORE" "$COURSE"
+touch "$MEM" "$HIST"
+
+guard_update(){ sha256sum "$MEM" "$HIST" > "$HASH"; }
+
+guard_check(){
+  if [[ -f "$HASH" ]]; then
+    sha256sum -c "$HASH" >/dev/null 2>&1 || {
+      echo "NOVA LOCK: memory/history changed outside NOVA."
+      exit 1
+    }
+  else
+    guard_update
+  fi
+}
+
+log_it(){
+  echo "$(date '+%Y-%m-%d %H:%M:%S') | $1" >> "$HIST"
+  guard_update
+}
+
+sanitize_intent(){
+  raw="$1"
+  if [[ "$raw" == *";"* || "$raw" == *"&"* || "$raw" == *"|"* || "$raw" == *"<"* || "$raw" == *">"* || "$raw" == *'$'* || "$raw" == *'`'* ]]; then
+    echo "NOVA BLOCKED: illegal shell character found." >&2
+    return 1
+  fi
+  printf "%s" "$raw"
+}
+
+safe_name(){ [[ "$1" =~ ^[a-zA-Z0-9._-]+$ ]]; }
+
+ask_yes(){
+  echo
+  read -r -p "NOVA approval required. Type YES: " ok < /dev/tty
+  [ "$ok" = "YES" ]
+}
+
+ensure_core_files(){
+  cat > "$ECO" <<'ECO'
+# Universal Dragon Ecosystem
+
+Universal Dragon = full ecosystem.
+NOVA = brain / language / intent engine.
+EVE = terminal / doctor / control layer.
+UDOS = mobile interface layer.
+Pi5 = live backend brain machine.
+GitHub = code / release / build home.
+Cloudflare = routing layer.
+Future = NOVA Terminal, NOVA Store, NOVA OS layer, robot body.
+
+Universal Dragon lives.
+NOVA thinks.
+EVE controls.
+UDOS displays.
+Aslam builds.
+ECO
+
+  cat > "$SPEC" <<'SPEC'
+# NOVA Language Specification v0.6
+
+## Identity
+Universal Dragon = ecosystem
+NOVA = brain/language core
+EVE = terminal/control doctor
+UDOS = mobile layer
+Aslam = creator
+
+## Current Core
+- memory
+- history
+- safety guard
+- backup
+- modules
+- course
+- store seed
+
+## Future Direction
+Language -> Shell -> Terminal -> Store -> OS Layer -> Robot Body
+SPEC
+}
+
+run_file(){
+  file="$1"
+  [[ ! -f "$file" ]] && echo "File not found: $file" && return 1
+  while IFS= read -r raw_line; do
+    safe="$(sanitize_intent "$raw_line")" || continue
+    run_line "$safe"
+  done < "$file"
+}
+
+install_pkg(){
+  pkg="$1"
+  case "$pkg" in
+    git|nodejs|nano|curl|wget|openssh|clang|rust|openjdk-21) ;;
+    python) echo "NOVA: Python blocked. Build NOVA first."; return ;;
+    *) echo "NOVA refused unknown package: $pkg"; return ;;
+  esac
+
+  echo "NOVA wants to install: $pkg"
+  if ask_yes; then
+    pkg install -y "$pkg"
+    log_it "installed $pkg"
+  else
+    echo "Cancelled."
+    log_it "cancelled install $pkg"
+  fi
+}
+
+store_seed(){
+  mkdir -p "$STORE/hello" "$STORE/memory-core" "$STORE/dragon-note"
+
+  cat > "$STORE/hello/app.nova" <<'EOF'
+say Hello from NOVA Store
+note hello app launched from NOVA Store
+EOF
+
+  cat > "$STORE/memory-core/app.nova" <<'EOF'
+say Memory Core online
+show memory
+EOF
+
+  cat > "$STORE/dragon-note/app.nova" <<'EOF'
+say Dragon Note online
+note Dragon Note app installed and tested
+EOF
+
+  cat > "$STORE/hello/ABOUT.txt" <<'EOF'
+hello: first NOVA Store demo app.
+EOF
+
+  cat > "$STORE/memory-core/ABOUT.txt" <<'EOF'
+memory-core: shows NOVA memory.
+EOF
+
+  cat > "$STORE/dragon-note/ABOUT.txt" <<'EOF'
+dragon-note: writes a test note into NOVA memory.
+EOF
+}
+
+store_install(){
+  name="$1"
+  safe_name "$name" || { echo "Bad app name."; return; }
+  [[ ! -d "$STORE/$name" ]] && echo "Store app not found: $name" && return
+
+  mkdir -p "$APPS/$name"
+  cp "$STORE/$name/app.nova" "$APPS/$name/main.nova"
+  cp "$STORE/$name/ABOUT.txt" "$APPS/$name/ABOUT.txt" 2>/dev/null
+
+  echo "Installed app: $name"
+  log_it "store installed $name"
+}
+
+run_line(){
+  line="$1"
+  low="$(printf "%s" "$line" | tr '[:upper:]' '[:lower:]')"
+
+  [[ -z "$line" || "$line" == \#* ]] && return
+
+  if [[ "$low" == *"rm -rf"* || "$low" == *"mkfs"* || "$low" == *"format"* || "$low" == *"wipe"* || "$low" == *"dd if="* ]]; then
+    echo "Blocked dangerous intent."
+    log_it "blocked dangerous intent"
+    return
+  fi
+
+  case "$low" in
+    "identity"|"who are you")
+      echo "Universal Dragon = ecosystem"
+      echo "NOVA = brain / language core"
+      echo "EVE = terminal / doctor / control layer"
+      echo "Aslam = creator / builder"
+      return ;;
+    "ecosystem"|"show ecosystem") cat "$ECO"; return ;;
+    "spec"|"spec show") cat "$SPEC"; return ;;
+    "show memory"|"memory show") cat "$MEM"; return ;;
+    "history show") cat "$HIST"; return ;;
+    "status"|"status system")
+      echo "NOVA System Status"
+      uname -a
+      pwd
+      return ;;
+    "backup"|"backup project")
+      name="$ROOT/backups/backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+      tar -czf "$name" "$ROOT" 2>/dev/null
+      echo "Backup created: $name"
+      log_it "backup created $name"
+      return ;;
+    "store init")
+      store_seed
+      echo "NOVA Store initialized."
+      log_it "store initialized"
+      return ;;
+    "store list")
+      ls -1 "$STORE" 2>/dev/null || echo "No store apps yet."
+      return ;;
+    "app list")
+      ls -1 "$APPS" 2>/dev/null || echo "No installed apps yet."
+      return ;;
+    "course show")
+      cat "$COURSE/NOVA_COURSE_v0.1.md" 2>/dev/null || echo "No course yet."
+      return ;;
+  esac
+
+  if [[ "$line" =~ ^say[[:space:]]+(.+)$ ]]; then echo "${BASH_REMATCH[1]}"; return; fi
+
+  if [[ "$line" =~ ^note[[:space:]]+(.+)$ ]]; then
+    msg="${BASH_REMATCH[1]}"
+    echo "$msg" >> "$MEM"
+    echo "Noted."
+    log_it "noted: $msg"
+    return
+  fi
+
+  if [[ "$line" =~ ^remember[[:space:]]+(.+)$ ]]; then
+    msg="${BASH_REMATCH[1]}"
+    echo "$msg" >> "$MEM"
+    echo "Remembered."
+    log_it "remembered: $msg"
+    return
+  fi
+
+  if [[ "$low" =~ ^install[[:space:]]+([a-zA-Z0-9._+-]+)$ ]]; then install_pkg "${BASH_REMATCH[1]}"; return; fi
+  if [[ "$low" == *"git venum"* ]]; then install_pkg git; return; fi
+  if [[ "$low" == *"python venum"* ]]; then echo "NOVA: Python blocked. Build NOVA first."; return; fi
+
+  if [[ "$low" =~ ^create[[:space:]]+project[[:space:]]+([a-zA-Z0-9._-]+)$ ]]; then
+    name="${BASH_REMATCH[1]}"
+    mkdir -p "$APPS/$name"
+    echo "say $name project created by NOVA" > "$APPS/$name/main.nova"
+    echo "Project created: $APPS/$name"
+    log_it "project created $name"
+    return
+  fi
+
+  if [[ "$low" =~ ^create[[:space:]]+file[[:space:]]+([a-zA-Z0-9._-]+)[[:space:]]+with[[:space:]]+(.+)$ ]]; then
+    file="${BASH_REMATCH[1]}"
+    content="${BASH_REMATCH[2]}"
+    safe_name "$file" || { echo "Blocked unsafe file name."; return; }
+    echo "$content" > "$file"
+    echo "File created: $file"
+    log_it "file created $file"
+    return
+  fi
+
+  if [[ "$low" =~ ^module[[:space:]]+create[[:space:]]+([a-zA-Z0-9._-]+)$ ]]; then
+    name="${BASH_REMATCH[1]}"
+    mkdir -p "$MODS/$name"
+    echo "say Module $name online" > "$MODS/$name/main.nova"
+    echo "note Module $name created inside NOVA" >> "$MODS/$name/main.nova"
+    echo "Module created: $MODS/$name"
+    log_it "module created $name"
+    return
+  fi
+
+  if [[ "$low" == "module list" || "$low" == "modules" ]]; then ls -1 "$MODS"; return; fi
+
+  if [[ "$low" =~ ^module[[:space:]]+run[[:space:]]+([a-zA-Z0-9._-]+)$ ]]; then
+    name="${BASH_REMATCH[1]}"
+    run_file "$MODS/$name/main.nova"
+    log_it "module ran $name"
+    return
+  fi
+
+  if [[ "$low" =~ ^store[[:space:]]+info[[:space:]]+([a-zA-Z0-9._-]+)$ ]]; then
+    name="${BASH_REMATCH[1]}"
+    cat "$STORE/$name/ABOUT.txt" 2>/dev/null || echo "No info for $name"
+    return
+  fi
+
+  if [[ "$low" =~ ^store[[:space:]]+install[[:space:]]+([a-zA-Z0-9._-]+)$ ]]; then
+    store_install "${BASH_REMATCH[1]}"
+    return
+  fi
+
+  if [[ "$low" =~ ^app[[:space:]]+run[[:space:]]+([a-zA-Z0-9._-]+)$ ]]; then
+    name="${BASH_REMATCH[1]}"
+    run_file "$APPS/$name/main.nova"
+    log_it "app ran $name"
+    return
+  fi
+
+  if [[ "$low" == "help" || "$low" == "nova help" ]]; then
+    echo "NOVA v0.6 Commands:"
+    echo "  nova identity"
+    echo "  nova ecosystem"
+    echo "  nova spec"
+    echo "  nova shell"
+    echo "  nova store init"
+    echo "  nova store list"
+    echo "  nova store info hello"
+    echo "  nova store install hello"
+    echo "  nova app list"
+    echo "  nova app run hello"
+    echo "  nova module create memory-core"
+    echo "  nova module list"
+    echo "  nova module run memory-core"
+    echo "  nova show memory"
+    echo "  nova history show"
+    echo "  nova backup"
+    return
+  fi
+
+  echo "NOVA does not understand: $line"
+}
+
+ensure_core_files
+# guard_check disabled: language-dev mode
+
+if [[ "$1" == "shell" ]]; then
+  echo "NOVA Shell v0.6. Type exit to leave."
+  while true; do
+    read -r -p "nova> " raw < /dev/tty
+    [[ "$raw" == "exit" ]] && break
+    safe="$(sanitize_intent "$raw")" || continue
+    run_line "$safe"
+  done
+  exit 0
+fi
+
+if [[ "$1" == "run" ]]; then run_file "$2"; exit 0; fi
+if [[ -f "$1" ]]; then run_file "$1"; exit 0; fi
+if [[ $# -gt 0 ]]; then safe="$(sanitize_intent "$*")" || exit 1; run_line "$safe"; exit 0; fi
+
+echo "NOVA Language v0.6"
+echo "Use: nova help"

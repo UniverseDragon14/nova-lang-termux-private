@@ -1,0 +1,115 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+MEM="$ROOT/memory/memory.txt"
+mkdir -p "$ROOT/memory" "$ROOT/backups" "$ROOT/apps"
+
+ask_yes() {
+  echo
+  read -r -p "NOVA approval required. Type YES: " ok < /dev/tty
+  [ "$ok" = "YES" ]
+}
+
+run_line() {
+  line="$1"
+
+  [[ -z "$line" || "$line" == \#* ]] && return
+
+  if [[ "$line" =~ ^say[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}"
+    return
+  fi
+
+  if [[ "$line" =~ ^remember[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}" >> "$MEM"
+    echo "Remembered."
+    return
+  fi
+
+  if [[ "$line" == "memory show" ]]; then
+    cat "$MEM" 2>/dev/null || echo "No memory yet."
+    return
+  fi
+
+  if [[ "$line" == "status system" ]]; then
+    echo "NOVA System Status"
+    uname -a
+    pwd
+    return
+  fi
+
+  if [[ "$line" =~ ^tool[[:space:]]+install[[:space:]]+([a-zA-Z0-9._+-]+)$ ]]; then
+    pkg="${BASH_REMATCH[1]}"
+    echo "NOVA wants to install: $pkg"
+    if ask_yes; then
+      pkg install -y "$pkg"
+    else
+      echo "Cancelled."
+    fi
+    return
+  fi
+
+  if [[ "$line" =~ ^file[[:space:]]+create[[:space:]]+\"([^\"]+)\"[[:space:]]+with[[:space:]]+\"(.*)\"$ ]]; then
+    file="${BASH_REMATCH[1]}"
+    content="${BASH_REMATCH[2]}"
+
+    if [[ "$file" == /* || "$file" == *".."* ]]; then
+      echo "Blocked unsafe file path."
+      return
+    fi
+
+    echo "$content" > "$file"
+    echo "File created: $file"
+    return
+  fi
+
+  if [[ "$line" == "backup project" ]]; then
+    name="$ROOT/backups/backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+    tar -czf "$name" . 2>/dev/null
+    echo "Backup created: $name"
+    return
+  fi
+
+  echo "NOVA does not understand: $line"
+}
+
+if [[ "$1" == "new" ]]; then
+  file="${2:-main.nova}"
+  cat > "$file" <<'NOVA'
+say "Universal Dragon lives"
+say "NOVA remembers"
+say "Aslam builds"
+
+remember "Universal Dragon = project"
+remember "NOVA = brain"
+remember "Brain first. Robot later."
+
+status system
+NOVA
+  echo "Created $file"
+  exit 0
+fi
+
+if [[ "$1" == "run" ]]; then
+  file="$2"
+else
+  file="$1"
+fi
+
+if [[ -z "$file" ]]; then
+  echo "NOVA Language v0.1"
+  echo "Use:"
+  echo "  nova new main.nova"
+  echo "  nova run main.nova"
+  echo "  nova main.nova"
+  exit 0
+fi
+
+if [[ ! -f "$file" ]]; then
+  echo "File not found: $file"
+  exit 1
+fi
+
+while IFS= read -r line; do
+  run_line "$line"
+done < "$file"

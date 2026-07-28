@@ -1,0 +1,292 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+HIST="$ROOT/memory/history.txt"
+TERMLOG="$ROOT/memory/novaterm_commands.txt"
+ALIAS="$ROOT/memory/novaterm_aliases.txt"
+TOOLS="$ROOT/tools"
+APPS="$ROOT/apps"
+STORE="$ROOT/store"
+
+mkdir -p "$ROOT/memory" "$TOOLS" "$APPS" "$STORE"
+touch "$HIST" "$TERMLOG" "$ALIAS"
+
+log_it() {
+  echo "$(date '+%Y-%m-%d %H:%M:%S') | NOVATERM $1" >> "$HIST"
+}
+
+remember_cmd() {
+  [[ -n "$1" && "$1" != "!!" ]] && echo "$(date '+%H:%M:%S') | $1" >> "$TERMLOG"
+}
+
+banner() {
+  echo "=================================="
+  echo " UNIVERSAL DRAGON - NOVA TERMINAL "
+  echo " Creator: Aslam"
+  echo " Version: NOVATERM v0.4.1.1"
+  echo " Mode: System Control Shortcuts"
+  echo "=================================="
+}
+
+help_menu() {
+  echo "NOVATERM v0.4.1 Commands:"
+  echo "  help / ?"
+  echo "  version / v"
+  echo "  identity / id"
+  echo "  ecosystem / eco"
+  echo "  where / w"
+  echo "  clear / cls"
+  echo "  memory / m"
+  echo "  history / h"
+  echo "  status / s"
+  echo "  backup / b"
+  echo "  tools / t"
+  echo "  apps / a"
+  echo "  store / st"
+  echo "  last"
+  echo "  !!"
+  echo "  report"
+  echo "  adapters"
+  echo "  map"
+  echo "  backups"
+  echo "  latest"
+  echo "  restore preview"
+  echo "  doctor / d"
+  echo "  alias list"
+  echo "  alias add short full command"
+  echo "  exit / q"
+  echo ""
+  echo "Examples:"
+  echo "  run status-tool"
+  echo "  install hello"
+  echo "  publish status-tool"
+  echo "  code status-tool"
+  echo "  alias add ss status"
+}
+
+alias_get() {
+  key="$1"
+  grep -E "^${key}=" "$ALIAS" 2>/dev/null | tail -n 1 | cut -d= -f2-
+}
+
+alias_add() {
+  key="$1"
+  shift
+  value="$*"
+
+  [[ -z "$key" || -z "$value" ]] && {
+    echo "Use: alias add short full command"
+    return
+  }
+
+  grep -v -E "^${key}=" "$ALIAS" > "$ALIAS.tmp" 2>/dev/null
+  mv "$ALIAS.tmp" "$ALIAS"
+  echo "$key=$value" >> "$ALIAS"
+
+  echo "Alias added: $key = $value"
+  log_it "alias added $key=$value"
+}
+
+run_shortcut() {
+  action="$1"
+  name="$2"
+
+  case "$action" in
+    run)
+      if [[ -f "$TOOLS/$name/main.nova" ]]; then
+        novatool run "$name"
+      elif [[ -f "$APPS/$name/main.nova" ]]; then
+        nova app run "$name"
+      else
+        echo "No tool/app found: $name"
+      fi
+      ;;
+    install)
+      nova store install "$name"
+      ;;
+    publish)
+      novatool publish "$name"
+      ;;
+    code)
+      novatool code "$name"
+      ;;
+  esac
+}
+
+run_cmd() {
+  raw="$1"
+
+  case "$raw" in
+    q) raw="exit" ;;
+    h) raw="history" ;;
+    m) raw="memory" ;;
+    s) raw="status" ;;
+    b) raw="backup" ;;
+    r) raw="report" ;;
+    d) raw="doctor" ;;
+    t) raw="tools" ;;
+    a) raw="apps" ;;
+    st) raw="store" ;;
+    v) raw="version" ;;
+    w) raw="where" ;;
+    id) raw="identity" ;;
+    eco) raw="ecosystem" ;;
+    cls) raw="clear" ;;
+    "?") raw="help" ;;
+  esac
+
+  first="${raw%% *}"
+  rest="${raw#"$first"}"
+  rest="${rest# }"
+
+  alias_value="$(alias_get "$first")"
+  if [[ -n "$alias_value" ]]; then
+    if [[ -n "$rest" && "$rest" != "$raw" ]]; then
+      raw="$alias_value $rest"
+    else
+      raw="$alias_value"
+    fi
+  fi
+
+  set -- $raw
+
+  case "$1" in
+    help|"")
+      help_menu
+      ;;
+    version)
+      echo "NOVATERM v0.4.1"
+      echo "NOVA language engine active"
+      echo "NOVATOOL factory active"
+      echo "NOVA Store registry active"
+      echo "Command memory active"
+      ;;
+    identity)
+      nova identity
+      ;;
+    ecosystem)
+      nova ecosystem
+      ;;
+    where)
+      echo "ROOT: $ROOT"
+      echo "TOOLS: $TOOLS"
+      echo "APPS: $APPS"
+      echo "STORE: $STORE"
+      echo "PWD: $(pwd)"
+      ;;
+    clear)
+      clear
+      banner
+      ;;
+    memory)
+      nova show memory
+      ;;
+    history)
+      nova history show
+      ;;
+    status)
+      nova status
+      ;;
+    backup)
+      nova backup
+      ;;
+    report)
+      novareport
+      ;;
+    doctor)
+      novadoctor
+      ;;
+    adapters)
+      novaadapter status
+      ;;
+    map)
+      novaadapter map
+      ;;
+    backups)
+      novabackup list
+      ;;
+    latest)
+      novabackup latest
+      ;;
+    restore)
+      if [[ "$2" == "preview" ]]; then
+        novarestore preview
+      elif [[ "$2" == "latest" ]]; then
+        novarestore latest
+      elif [[ "$2" == "path" ]]; then
+        novarestore path
+      else
+        novarestore help
+      fi
+      ;;
+    tools)
+      novatool list
+      ;;
+    apps)
+      nova app list
+      ;;
+    store)
+      shift
+      if [[ $# -eq 0 ]]; then
+        nova store list
+      else
+        nova store "$@"
+      fi
+      ;;
+    run|install|publish|code)
+      run_shortcut "$1" "$2"
+      ;;
+    tool)
+      shift
+      novatool "$@"
+      ;;
+    app)
+      shift
+      nova app "$@"
+      ;;
+    last)
+      tail -n 12 "$TERMLOG"
+      ;;
+    alias)
+      if [[ "$2" == "list" ]]; then
+        cat "$ALIAS"
+      elif [[ "$2" == "add" ]]; then
+        shift 2
+        alias_add "$@"
+      else
+        echo "Use: alias list OR alias add short command"
+      fi
+      ;;
+    exit)
+      return 99
+      ;;
+    *)
+      nova "$raw"
+      ;;
+  esac
+}
+
+banner
+log_it "v0.3 started"
+
+LAST_CMD=""
+
+while true; do
+  printf "dragon[%s]> " "$(date '+%H:%M')"
+  read -r cmd
+
+  if [[ "$cmd" == "!!" ]]; then
+    cmd="$LAST_CMD"
+    echo "$cmd"
+  fi
+
+  [[ "$cmd" == "exit" || "$cmd" == "q" ]] && break
+  [[ -z "$cmd" ]] && continue
+
+  remember_cmd "$cmd"
+  LAST_CMD="$cmd"
+  run_cmd "$cmd"
+done
+
+log_it "v0.3 stopped"
+echo "NOVATERM closed."

@@ -1,0 +1,34 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+B="$ROOT/backups"
+
+mkdir -p "$B"
+
+case "$1" in
+  list|"")
+    echo "NOVA Backups:"
+    ls -lh "$B" | tail -n 20
+    ;;
+  count)
+    echo "Backup count:"
+    ls -1 "$B" | wc -l
+    ;;
+  latest)
+    echo "Latest backup:"
+    ls -lt "$B" | head -n 2
+    ;;
+  path)
+    echo "$B"
+    ;;
+  help)
+    echo "NOVABACKUP v0.1"
+    echo "  novabackup list"
+    echo "  novabackup count"
+    echo "  novabackup latest"
+    echo "  novabackup path"
+    ;;
+  *)
+    echo "Unknown command. Use: novabackup help"
+    ;;
+esac

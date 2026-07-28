@@ -1,0 +1,73 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+B="$ROOT/backups"
+BIN="$PREFIX/bin"
+
+latest_match() {
+  prefix="$1"
+  find "$B" -maxdepth 1 -type f -name "${prefix}*stable*" -printf "%T@ %p\n" 2>/dev/null | sort -nr | head -n 1 | cut -d' ' -f2-
+}
+
+show_one() {
+  name="$1"
+  file="$(latest_match "$name")"
+  if [[ -n "$file" ]]; then
+    echo "FOUND   $name -> $(basename "$file")"
+  else
+    echo "MISSING $name stable backup"
+  fi
+}
+
+restore_one() {
+  cmd="$1"
+  prefix="$2"
+  file="$(latest_match "$prefix")"
+
+  if [[ -z "$file" ]]; then
+    echo "MISSING $prefix stable backup"
+    return
+  fi
+
+  cp "$file" "$BIN/$cmd"
+  chmod +x "$BIN/$cmd"
+  echo "RESTORED $cmd from $(basename "$file")"
+}
+
+case "$1" in
+  status|"")
+    echo "NOVARECOVER v0.1 - Stable Backup Status"
+    show_one "nova_v0.6"
+    show_one "novaterm_v0.4"
+    show_one "novatool_v0.2"
+    show_one "novaadapter_v0.1"
+    show_one "novabackup_v0.1"
+    show_one "novarestore_v0.1"
+    show_one "novareport_v0.1"
+    show_one "novadoctor_v0.1"
+    ;;
+
+  restore)
+    echo "NOVARECOVER restoring stable core..."
+    restore_one nova "nova_v0.6"
+    restore_one novaterm "novaterm_v0.4"
+    restore_one novatool "novatool_v0.2"
+    restore_one novaadapter "novaadapter_v0.1"
+    restore_one novabackup "novabackup_v0.1"
+    restore_one novarestore "novarestore_v0.1"
+    restore_one novareport "novareport_v0.1"
+    restore_one novadoctor "novadoctor_v0.1"
+    echo "Recovery complete. Run: novadoctor"
+    ;;
+
+  help)
+    echo "NOVARECOVER v0.1"
+    echo "  novarecover status"
+    echo "  novarecover restore"
+    echo "  novarecover help"
+    ;;
+
+  *)
+    echo "Unknown command. Use: novarecover help"
+    ;;
+esac

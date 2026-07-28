@@ -1,0 +1,44 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+B="$ROOT/backups"
+
+mkdir -p "$B"
+
+case "$1" in
+  list|"")
+    echo "NOVA Backups - latest 20:"
+    find "$B" -maxdepth 1 -type f -printf "%TY-%Tm-%Td %TH:%TM  %s bytes  %f\n" 2>/dev/null | sort -r | head -n 20
+    ;;
+  count)
+    echo "Backup/file count:"
+    find "$B" -maxdepth 1 -type f | wc -l
+    ;;
+  latest)
+    echo "Latest backup/file:"
+    find "$B" -maxdepth 1 -type f -printf "%TY-%Tm-%Td %TH:%TM  %s bytes  %f\n" 2>/dev/null | sort -r | head -n 1
+    ;;
+  tar)
+    echo "Latest tar backups:"
+    find "$B" -maxdepth 1 -type f -name "*.tar.gz" -printf "%TY-%Tm-%Td %TH:%TM  %s bytes  %f\n" 2>/dev/null | sort -r | head -n 10
+    ;;
+  stable)
+    echo "Stable files:"
+    find "$B" -maxdepth 1 -type f -name "*stable*" -printf "%TY-%Tm-%Td %TH:%TM  %s bytes  %f\n" 2>/dev/null | sort -r
+    ;;
+  path)
+    echo "$B"
+    ;;
+  help)
+    echo "NOVABACKUP v0.1.1"
+    echo "  novabackup list"
+    echo "  novabackup count"
+    echo "  novabackup latest"
+    echo "  novabackup tar"
+    echo "  novabackup stable"
+    echo "  novabackup path"
+    ;;
+  *)
+    echo "Unknown command. Use: novabackup help"
+    ;;
+esac

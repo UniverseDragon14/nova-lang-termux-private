@@ -1,0 +1,8 @@
+Universal Dragon = project
+NOVA = brain
+Brain first. Robot later.
+NOVA language approval bug fixed
+NOVA v0.3 fixed after old hook removed
+NOVA language spec v0.1 created
+NOVA v0.4 safety engine installed
+NOVA shell mode first live test

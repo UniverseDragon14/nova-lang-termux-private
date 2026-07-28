@@ -1,0 +1,16 @@
+set creator = "Aslam"
+
+use ~/nova-lang/lib/dragon_lib.nova
+
+functions
+
+call greet "$creator"
+call add 20 22
+
+if total == "42"
+  say "Termux NOVA v1.0 confirmed. Total is $total"
+  note "Termux NOVA Python Core v1.0 tested by $creator"
+end
+
+vars
+history

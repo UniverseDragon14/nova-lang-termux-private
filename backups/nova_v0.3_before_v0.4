@@ -1,0 +1,203 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+MEM="$ROOT/memory/memory.txt"
+HIST="$ROOT/memory/history.txt"
+mkdir -p "$ROOT/memory" "$ROOT/backups" "$ROOT/apps"
+
+log_it() {
+  echo "$(date '+%Y-%m-%d %H:%M:%S') | $1" >> "$HIST"
+}
+
+ask_yes() {
+  echo
+  read -r -p "NOVA approval required. Type YES: " ok < /dev/tty
+  [ "$ok" = "YES" ]
+}
+
+safe_file() {
+  [[ "$1" != /* && "$1" != *".."* ]]
+}
+
+install_pkg() {
+  pkg="$1"
+  echo "NOVA wants to install: $pkg"
+  if ask_yes; then
+    pkg install -y "$pkg"
+    log_it "installed $pkg"
+  else
+    echo "Cancelled."
+    log_it "cancelled install $pkg"
+  fi
+}
+
+run_line() {
+  line="$1"
+  low="$(printf "%s" "$line" | tr '[:upper:]' '[:lower:]')"
+
+  [[ -z "$line" || "$line" == \#* ]] && return
+
+  if [[ "$low" == *"rm -rf"* || "$low" == *"mkfs"* || "$low" == *"format"* || "$low" == *"wipe"* || "$low" == *"dd if="* ]]; then
+    echo "Blocked dangerous command."
+    log_it "blocked dangerous intent: $line"
+    return
+  fi
+
+  if [[ "$line" =~ ^say[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}"
+    return
+  fi
+
+  if [[ "$line" =~ ^remember[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}" >> "$MEM"
+    echo "Remembered."
+    log_it "remembered"
+    return
+  fi
+
+  if [[ "$line" =~ ^note[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}" >> "$MEM"
+    echo "Noted."
+    log_it "noted"
+    return
+  fi
+
+  if [[ "$low" == "memory show" || "$low" == "show memory" || "$low" == *"memory kaatu"* || "$low" == *"ninaivu kaatu"* ]]; then
+    cat "$MEM" 2>/dev/null || echo "No memory yet."
+    return
+  fi
+
+  if [[ "$low" == "history show" || "$low" == *"history kaatu"* ]]; then
+    cat "$HIST" 2>/dev/null || echo "No history yet."
+    return
+  fi
+
+  if [[ "$low" == "status system" || "$low" == "status" || "$low" == *"system epdi"* || "$low" == *"system status"* ]]; then
+    echo "NOVA System Status"
+    uname -a
+    pwd
+    return
+  fi
+
+  if [[ "$low" == "backup" || "$low" == "backup project" || "$low" == *"backup pannu"* ]]; then
+    name="$ROOT/backups/backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+    tar -czf "$name" . 2>/dev/null
+    echo "Backup created: $name"
+    log_it "backup created $name"
+    return
+  fi
+
+  if [[ "$low" =~ ^(tool[[:space:]]+)?install[[:space:]]+([a-zA-Z0-9._+-]+)$ ]]; then
+    install_pkg "${BASH_REMATCH[2]}"
+    return
+  fi
+
+  if [[ "$low" == *"python"* && ( "$low" == *"venum"* || "$low" == *"install"* || "$low" == *"thevai"* ) ]]; then
+    install_pkg "python"
+    return
+  fi
+
+  if [[ "$low" == *"git"* && ( "$low" == *"venum"* || "$low" == *"install"* || "$low" == *"thevai"* ) ]]; then
+    install_pkg "git"
+    return
+  fi
+
+  if [[ "$low" == *"node"* || "$low" == *"npm"* ]]; then
+    if [[ "$low" == *"venum"* || "$low" == *"install"* || "$low" == *"thevai"* ]]; then
+      install_pkg "nodejs"
+      return
+    fi
+  fi
+
+  if [[ "$low" == *"nano"* && ( "$low" == *"venum"* || "$low" == *"install"* || "$low" == *"thevai"* ) ]]; then
+    install_pkg "nano"
+    return
+  fi
+
+  if [[ "$low" =~ ^create[[:space:]]+file[[:space:]]+([^[:space:]]+)[[:space:]]+with[[:space:]]+(.+)$ ]]; then
+    file="${BASH_REMATCH[1]}"
+    content="${BASH_REMATCH[2]}"
+    if safe_file "$file"; then
+      echo "$content" > "$file"
+      echo "File created: $file"
+      log_it "file created $file"
+    else
+      echo "Blocked unsafe file path."
+    fi
+    return
+  fi
+
+  if [[ "$low" == "help" || "$low" == "nova help" ]]; then
+    echo "NOVA v0.3 Commands:"
+    echo "  nova python venum"
+    echo "  nova git venum"
+    echo "  nova en memory kaatu"
+    echo "  nova system epdi irukku"
+    echo "  nova backup pannu"
+    echo "  nova note \"message\""
+    echo "  nova history show"
+    return
+  fi
+
+  if [[ "$line" =~ ^note[[:space:]]+(.+)$ ]]; then
+    msg="${BASH_REMATCH[1]}"
+    echo "$msg" >> "$MEM"
+    echo "Noted."
+    log_it "noted: $msg"
+    return
+  fi
+
+  if [[ "$line" =~ ^remember[[:space:]]+(.+)$ ]]; then
+    msg="${BASH_REMATCH[1]}"
+    echo "$msg" >> "$MEM"
+    echo "Remembered."
+    log_it "remembered: $msg"
+    return
+  fi
+
+  echo "NOVA does not understand: $line"
+}
+
+if [[ "$1" == "new" ]]; then
+  file="${2:-main.nova}"
+  cat > "$file" <<'NOVA'
+say "Universal Dragon lives"
+say "NOVA remembers"
+say "Aslam builds"
+
+remember "Universal Dragon = project"
+remember "NOVA = brain"
+remember "Brain first. Robot later."
+
+status system
+NOVA
+  echo "Created $file"
+  exit 0
+fi
+
+if [[ "$1" == "run" ]]; then
+  file="$2"
+  if [[ ! -f "$file" ]]; then
+    echo "File not found: $file"
+    exit 1
+  fi
+  while IFS= read -r line; do
+    run_line "$line"
+  done < "$file"
+  exit 0
+fi
+
+if [[ -f "$1" ]]; then
+  while IFS= read -r line; do
+    run_line "$line"
+  done < "$1"
+  exit 0
+fi
+
+if [[ $# -gt 0 ]]; then
+  run_line "$*"
+  exit 0
+fi
+
+echo "NOVA Language v0.3"
+echo "Use: nova help"

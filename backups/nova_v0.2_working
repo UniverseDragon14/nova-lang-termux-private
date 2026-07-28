@@ -1,0 +1,136 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+MEM="$ROOT/memory/memory.txt"
+mkdir -p "$ROOT/memory" "$ROOT/backups" "$ROOT/apps"
+
+ask_yes() {
+  echo
+  read -r -p "NOVA approval required. Type YES: " ok < /dev/tty
+  [ "$ok" = "YES" ]
+}
+
+safe_file() {
+  [[ "$1" != /* && "$1" != *".."* ]]
+}
+
+run_line() {
+  line="$1"
+  [[ -z "$line" || "$line" == \#* ]] && return
+
+  if [[ "$line" =~ ^say[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}"
+    return
+  fi
+
+  if [[ "$line" =~ ^remember[[:space:]]+\"(.*)\"$ ]]; then
+    echo "${BASH_REMATCH[1]}" >> "$MEM"
+    echo "Remembered."
+    return
+  fi
+
+  if [[ "$line" == "memory show" || "$line" == "show memory" ]]; then
+    cat "$MEM" 2>/dev/null || echo "No memory yet."
+    return
+  fi
+
+  if [[ "$line" == "status system" || "$line" == "status" ]]; then
+    echo "NOVA System Status"
+    uname -a
+    pwd
+    return
+  fi
+
+  if [[ "$line" =~ ^(tool[[:space:]]+)?install[[:space:]]+([a-zA-Z0-9._+-]+)$ ]]; then
+    pkg="${BASH_REMATCH[2]}"
+    echo "NOVA wants to install: $pkg"
+    if ask_yes; then
+      pkg install -y "$pkg"
+    else
+      echo "Cancelled."
+    fi
+    return
+  fi
+
+  if [[ "$line" =~ ^create[[:space:]]+file[[:space:]]+([^[:space:]]+)[[:space:]]+with[[:space:]]+(.+)$ ]]; then
+    file="${BASH_REMATCH[1]}"
+    content="${BASH_REMATCH[2]}"
+    if safe_file "$file"; then
+      echo "$content" > "$file"
+      echo "File created: $file"
+    else
+      echo "Blocked unsafe file path."
+    fi
+    return
+  fi
+
+  if [[ "$line" =~ ^file[[:space:]]+create[[:space:]]+\"([^\"]+)\"[[:space:]]+with[[:space:]]+\"(.*)\"$ ]]; then
+    file="${BASH_REMATCH[1]}"
+    content="${BASH_REMATCH[2]}"
+    if safe_file "$file"; then
+      echo "$content" > "$file"
+      echo "File created: $file"
+    else
+      echo "Blocked unsafe file path."
+    fi
+    return
+  fi
+
+  if [[ "$line" == "backup project" || "$line" == "backup" ]]; then
+    name="$ROOT/backups/backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+    tar -czf "$name" . 2>/dev/null
+    echo "Backup created: $name"
+    return
+  fi
+
+  echo "NOVA does not understand: $line"
+}
+
+if [[ "$1" == "new" ]]; then
+  file="${2:-main.nova}"
+  cat > "$file" <<'NOVA'
+say "Universal Dragon lives"
+say "NOVA remembers"
+say "Aslam builds"
+
+remember "Universal Dragon = project"
+remember "NOVA = brain"
+remember "Brain first. Robot later."
+
+status system
+NOVA
+  echo "Created $file"
+  exit 0
+fi
+
+if [[ "$1" == "run" ]]; then
+  file="$2"
+  if [[ ! -f "$file" ]]; then
+    echo "File not found: $file"
+    exit 1
+  fi
+  while IFS= read -r line; do
+    run_line "$line"
+  done < "$file"
+  exit 0
+fi
+
+if [[ -f "$1" ]]; then
+  while IFS= read -r line; do
+    run_line "$line"
+  done < "$1"
+  exit 0
+fi
+
+if [[ $# -gt 0 ]]; then
+  run_line "$*"
+  exit 0
+fi
+
+echo "NOVA Language v0.2"
+echo "Use:"
+echo "  nova install git"
+echo "  nova show memory"
+echo "  nova status"
+echo "  nova create file a.txt with hello"
+echo "  nova run main.nova"

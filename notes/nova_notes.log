@@ -1,0 +1,4 @@
+2026-06-21 16:37:52 NOVA/QBIT Universal Adapter Router v1 added. It routes safe adapter requests and blocks dangerous system routes.
+2026-06-21 16:46:15 NOVA/QBIT Universal Adapter Router v1 correctly committed and tagged. It routes safe adapter requests and blocks dangerous system routes.
+2026-06-21 16:49:37 NOVA/QBIT Universal Adapter Router v1 correctly committed and tagged after fresh Termux restore.
+2026-06-24 06:46:30 QBIT NOVA v1.4.0 CI/CD and SEO workflow restored for Universal Dragon by Aslam.

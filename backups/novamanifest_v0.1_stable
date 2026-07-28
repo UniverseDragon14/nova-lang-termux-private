@@ -1,0 +1,60 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+ROOT="$HOME/nova-lang"
+OUT="$ROOT/UNIVERSAL_DRAGON_MANIFEST.md"
+
+{
+echo "# Universal Dragon Manifest v0.1"
+echo
+echo "Generated: $(date '+%Y-%m-%d %H:%M:%S')"
+echo
+echo "## Identity"
+echo "- Creator: Aslam"
+echo "- Ecosystem: Universal Dragon"
+echo "- Core language: NOVA"
+echo "- Terminal: NOVATERM"
+echo "- Tool factory: NOVATOOL"
+echo "- Store: NOVA Store"
+echo
+echo "## Core Paths"
+echo "- Root: $ROOT"
+echo "- Tools: $ROOT/tools"
+echo "- Apps: $ROOT/apps"
+echo "- Store: $ROOT/store"
+echo "- Backups: $ROOT/backups"
+echo "- Restore preview: $ROOT/restore-preview"
+echo
+echo "## Installed Core Commands"
+for c in nova novaterm novatool novaadapter novabackup novarestore novareport novadoctor novarecover novamanifest; do
+  if command -v "$c" >/dev/null 2>&1; then
+    echo "- $c: $(command -v "$c")"
+  else
+    echo "- $c: missing"
+  fi
+done
+echo
+echo "## Adapter Status"
+novaadapter status 2>/dev/null || echo "novaadapter not available"
+echo
+echo "## NOVA Tools"
+novatool list 2>/dev/null || echo "novatool not available"
+echo
+echo "## NOVA Apps"
+nova app list 2>/dev/null || echo "nova app list not available"
+echo
+echo "## Backup Status"
+novabackup count 2>/dev/null
+novabackup latest 2>/dev/null
+echo
+echo "## Latest History"
+tail -n 20 "$ROOT/memory/history.txt" 2>/dev/null
+echo
+echo "## Mission"
+echo "Universal Dragon builds safe creation tools."
+echo "NOVA is a tool-language and commander layer."
+echo "Existing languages work as backend adapters."
+echo "Goal: build, repair, backup, restore, observe and control direction safely."
+} > "$OUT"
+
+echo "Manifest written:"
+echo "$OUT"

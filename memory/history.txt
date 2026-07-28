@@ -1,0 +1,380 @@
+2026-06-10 12:57:26 | noted: NOVA v0.3 fixed after old hook removed
+2026-06-10 13:12:57 | noted: NOVA language spec v0.1 created
+2026-06-10 13:19:59 | noted: NOVA v0.4 safety engine installed
+2026-06-10 13:20:05 | project created dragon-test
+2026-06-10 13:20:07 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_132007.tar.gz
+2026-06-10 13:23:05 | noted: NOVA shell mode first live test
+2026-06-10 13:23:14 | project created nova-course
+2026-06-10 13:23:30 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_132330.tar.gz
+2026-06-10 14:27:56 | noted: NOVA v0.5 module backbone installed
+2026-06-10 14:28:04 | module created memory-core
+2026-06-10 14:28:04 | noted: Module memory-core created inside NOVA v0.5
+2026-06-10 14:28:04 | module ran memory-core
+2026-06-10 14:28:04 | course created
+2026-06-10 14:28:06 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_142806.tar.gz
+2026-06-10 14:41:15 | noted: NOVA v0.5 stable. Module backbone, course system, history and backup working.
+2026-06-10 14:48:39 | noted: NOVA v0.6 store seed installed
+2026-06-10 14:48:45 | store initialized
+2026-06-10 14:48:45 | store installed hello
+2026-06-10 14:48:45 | noted: hello app launched from NOVA Store
+2026-06-10 14:48:45 | app ran hello
+2026-06-10 14:48:47 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_144847.tar.gz
+2026-06-10 15:08:11 | noted: NOVA-Q quantum research branch v0.1 created
+2026-06-10 15:17:57 | noted: NOVABIT concept locked inside NOVA-Q. Tamil-speaking computer later, not now.
+2026-06-10 15:20:42 | noted: NOVABIT Lab v0.1 installed as NOVA-Q simulator seed
+2026-06-10 15:29:33 | noted: NOVA-Q paused. Focus returned to NOVA Tool Factory. NOVATOOL v0.1 installed.
+2026-06-10 15:29:43 | NOVATOOL created tool backup-tool
+2026-06-10 15:29:43 | NOVATOOL ran tool backup-tool
+2026-06-10 15:29:43 | NOVATOOL packed tool backup-tool
+2026-06-10 15:33:59 | noted: NOVATOOL v0.1.1 hash guard fix installed
+2026-06-10 15:34:06 | noted: Tool backup-tool executed through NOVA Tool Factory
+2026-06-10 15:34:06 | NOVATOOL ran tool backup-tool
+2026-06-10 15:34:06 | NOVATOOL packed tool backup-tool
+2026-06-10 15:34:07 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_153407.tar.gz
+2026-06-10 15:37:56 | noted: NOVA v0.6.1 language-dev mode. Hash guard disabled. Grammar/parser remains.
+2026-06-10 15:38:02 | noted: Tool backup-tool executed through NOVA Tool Factory
+2026-06-10 15:38:03 | NOVATOOL ran tool backup-tool
+2026-06-10 15:38:03 | NOVATOOL packed tool backup-tool
+2026-06-10 15:38:04 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_153804.tar.gz
+2026-06-10 15:42:44 | noted: Universal Dragon core meaning locked. NOVA is tool-language, not police. Universe means expanding possibility field, Dragon means handle/control direction force.
+2026-06-10 15:45:16 | noted: NOVATOOL v0.2 tool grammar installed. Tool creation, code view, run, pack and publish working.
+2026-06-10 15:45:23 | NOVATOOL created tool status-tool type=status
+2026-06-10 15:45:23 | noted: Status tool status-tool executed
+2026-06-10 15:45:23 | NOVATOOL ran tool status-tool
+2026-06-10 15:45:23 | NOVATOOL published tool status-tool to store
+2026-06-10 15:45:23 | store installed status-tool
+2026-06-10 15:45:23 | noted: Status tool status-tool executed
+2026-06-10 15:45:23 | app ran status-tool
+2026-06-10 15:45:25 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_154525.tar.gz
+2026-06-10 16:33:56 | noted: Today NOVA evolved from command runner to tool-language ecosystem: memory, history, modules, store seed, NOVATOOL factory and NOVA-Q research branch documented.
+2026-06-10 16:33:57 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_163357.tar.gz
+2026-06-10 16:34:59 | noted: NOVATERM v0.1 installed. NOVA now has a first terminal shell seed.
+2026-06-10 16:35:08 | NOVATERM started
+2026-06-10 16:44:21 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_164421.tar.gz
+2026-06-10 16:44:24 | NOVATERM stopped
+2026-06-10 17:08:59 | noted: NOVATERM v0.1 tested successfully. dragon prompt, identity, tool list, history, backup and exit working.
+2026-06-10 17:09:01 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_170900.tar.gz
+2026-06-10 17:09:58 | noted: NOVATERM v0.2 shortcut terminal installed. Tools, apps, run, install, publish, code, where and version shortcuts added.
+2026-06-10 17:10:07 | NOVATERM v0.2 started
+2026-06-10 17:10:14 | noted: Status tool status-tool executed
+2026-06-10 17:10:14 | NOVATOOL ran tool status-tool
+2026-06-10 17:10:14 | store installed hello
+2026-06-10 17:10:14 | noted: hello app launched from NOVA Store
+2026-06-10 17:10:14 | app ran hello
+2026-06-10 17:10:15 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_171014.tar.gz
+2026-06-10 17:11:40 | NOVATERM v0.2 stopped
+2026-06-10 17:11:46 | noted: NOVATERM v0.2 tested successfully. Shortcut terminal commands version, where, tools, apps, run, install, history and backup working.
+2026-06-10 17:11:50 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_171146.tar.gz
+2026-06-10 17:14:33 | noted: NOVATERM v0.2 tested successfully. Shortcut terminal commands version, where, tools, apps, run, install, history and backup working.
+2026-06-10 17:14:45 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_171434.tar.gz
+2026-06-10 17:28:47 | noted: NOVATERM v0.3 installed. Alias system, short commands, command memory, repeat last and cleaner prompt added.
+2026-06-10 17:28:57 | NOVATERM v0.3 started
+2026-06-10 17:37:43 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_173709.tar.gz
+2026-06-10 17:37:43 | NOVATERM v0.3 stopped
+2026-06-10 20:34:58 | NOVATERM v0.3 started
+2026-06-10 20:35:06 | NOVATERM alias added ss=status
+2026-06-10 20:35:29 | noted: NOVATERM v0.3 tested after room return. Alias, memory, shortcut and backup flow confirmed.
+2026-06-10 20:36:46 | noted: NOVATERM v0.3 tested successfully after room return. Alias ss, shortcuts, last command memory and repeat command working.
+2026-06-10 20:38:05 | noted: NOVA backup fixed to exclude backups folder, node_modules and git folder.
+2026-06-10 20:38:12 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_203812.tar.gz
+2026-06-10 20:40:06 | noted: NOVA backup fast fix verified. Backup now excludes backups folder, node_modules and git folder.
+2026-06-10 20:40:07 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_204007.tar.gz
+2026-06-10 20:40:17 | noted: NOVABACKUP v0.1 installed. Backup list, count, latest and path commands added.
+2026-06-10 20:41:13 | noted: NOVABACKUP v0.1.1 clean backup viewer installed. Latest, list, tar and stable views improved.
+2026-06-10 20:42:53 | noted: NOVARESTORE v0.1 preview tool installed. It can preview and extract backups without overwriting live files.
+2026-06-10 20:45:29 | noted: NOVA language stack v0.1 locked. Python is optional helper. Bash is current engine. C/C++/Rust are future strong runtime layers. 1/0 is machine reality.
+2026-06-10 20:47:58 | noted: NOVA adapter principle locked. NOVA can use Bash, Python, C, C++, Rust, JavaScript, HTML and lower machine layers as backend workers.
+2026-06-10 20:53:16 | noted: NOVAADAPTER v0.1 installed. NOVA can now map Bash, Python, JavaScript, C, C++, Rust and Java as backend workers.
+2026-06-10 20:53:25 | NOVAADAPTER tested adapter bash
+2026-06-10 20:53:25 | NOVAADAPTER tested adapter python
+2026-06-10 20:53:25 | NOVAADAPTER tested adapter js
+2026-06-10 20:53:26 | NOVAADAPTER tested adapter c
+2026-06-10 20:53:28 | NOVAADAPTER tested adapter cpp
+2026-06-10 20:53:28 | NOVAADAPTER tested adapter rust
+2026-06-10 20:53:30 | NOVAADAPTER tested adapter java
+2026-06-10 20:55:00 | noted: NOVAADAPTER v0.1 tested. Bash, Python, NodeJS, C, C++ and Java adapters ready. Rust missing for later install.
+2026-06-10 20:55:01 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_205501.tar.gz
+2026-06-10 20:58:16 | NOVAADAPTER tested adapter rust
+2026-06-10 20:58:27 | noted: Rust adapter installed and tested. NOVAADAPTER now has Bash, Python, NodeJS, C, C++, Rust and Java ready.
+2026-06-10 20:58:28 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_205828.tar.gz
+2026-06-10 21:01:02 | noted: Universal Dragon adapter army completed. Bash, Python, NodeJS, C, C++, Rust and Java are ready as NOVA backend workers.
+2026-06-10 21:01:03 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_210103.tar.gz
+2026-06-10 21:01:10 | noted: NOVAREPORT v0.1 installed. Universal Dragon can now show full NOVA system status in one command.
+2026-06-10 21:01:27 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_210127.tar.gz
+2026-06-10 21:02:06 | noted: Universal Dragon mission clarified. Tools can be misused by destructive people, but Aslam builds NOVA to handle, protect, organize, backup, restore and create safely without destroying the world.
+2026-06-10 21:02:13 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_210213.tar.gz
+2026-06-10 21:05:54 | noted: NOVATERM v0.4 installed. Report, adapters, map, backups, latest and restore preview shortcuts added.
+2026-06-10 21:06:40 | NOVATERM v0.3 started
+2026-06-10 21:06:46 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_210646.tar.gz
+2026-06-10 21:06:54 | NOVATERM v0.3 stopped
+2026-06-10 21:06:56 | noted: NOVATERM v0.4 tested. System report, adapter status, map, backup list, latest backup and restore preview shortcuts working.
+2026-06-10 21:06:57 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_210657.tar.gz
+2026-06-10 22:40:50 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_224049.tar.gz
+2026-06-10 22:43:16 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_224316.tar.gz
+2026-06-10 22:43:26 | noted: NOVA restored from v0.6.1 backup after accidental old v0.4 overwrite. System recovered and doctor green.
+2026-06-10 22:43:28 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_224328.tar.gz
+2026-06-10 22:44:42 | noted: NOVATERM v0.4.1 installed. Doctor shortcut added as doctor and d.
+2026-06-10 22:44:53 | NOVATERM v0.3 started
+2026-06-10 22:45:32 | NOVATERM v0.3 stopped
+2026-06-10 22:45:44 | noted: NOVATERM v0.4.1 tested. Doctor shortcut working inside Dragon terminal.
+2026-06-10 22:45:45 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_224545.tar.gz
+2026-06-10 22:47:36 | noted: NOVARECOVER v0.1 installed. Stable core recovery switch added for accidental overwrites.
+2026-06-10 22:47:46 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_224746.tar.gz
+2026-06-10 22:49:27 | noted: NOVATERM v0.4.2 installed. Recover shortcut added and old v0.3 log label fixed.
+2026-06-10 22:49:40 | NOVATERM v0.4.2 started
+2026-06-10 22:49:53 | NOVATERM v0.4.2 stopped
+2026-06-10 22:50:17 | noted: NOVATERM v0.4.2 tested. Recover shortcut, doctor shortcut, report and clean version log working.
+2026-06-10 22:50:19 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_225019.tar.gz
+2026-06-10 22:52:17 | noted: NOVAMANIFEST v0.1 installed. Universal Dragon can now generate a full project manifest document.
+2026-06-10 22:52:27 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_225227.tar.gz
+2026-06-10 22:54:05 | noted: NOVAMANIFEST v0.1 installed. Universal Dragon can now generate a full project manifest document.
+2026-06-10 22:54:14 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_225413.tar.gz
+2026-06-10 23:25:30 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_232530.tar.gz
+2026-06-10 23:27:01 | noted: NOVAMANIFEST v0.1 tested. Manifest generated successfully with identity, paths, commands, adapters, tools, apps, backups and history.
+2026-06-10 23:27:01 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260610_232701.tar.gz
+2026-06-11 01:33:26 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_013325.tar.gz
+2026-06-11 01:33:42 | run file /data/data/com.termux/files/home/nova-lang/mobile_test.nova
+2026-06-11 01:33:42 | use file /data/data/com.termux/files/home/nova-lang/lib/dragon_lib.nova
+2026-06-11 01:33:42 | noted: Termux NOVA Python Core v1.0 tested by Aslam
+2026-06-11 01:33:56 | noted: Termux NOVA Python Core v1.0 mobile branch installed and tested while Pi5 is offline.
+2026-06-11 01:33:56 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_013356.tar.gz
+2026-06-11 01:37:25 | manifest created /data/data/com.termux/files/home/nova-lang/UNIVERSAL_DRAGON_MANIFEST.md
+2026-06-11 01:37:25 | export bundle created /data/data/com.termux/files/home/nova-lang/backups/termux_nova_export_20260611_013725.tar.gz
+2026-06-11 01:37:26 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_013725.tar.gz
+2026-06-11 01:37:45 | noted: Termux NOVA Python Core v1.1 installed. Doctor, manifest and export bundle working.
+2026-06-11 01:37:46 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_013745.tar.gz
+2026-06-11 01:44:27 | import preview extracted /data/data/com.termux/files/home/nova-lang/backups/termux_nova_export_20260611_013725.tar.gz to /data/data/com.termux/files/home/nova-lang/restore-preview/import_20260611_014427
+2026-06-11 01:44:42 | noted: Termux NOVA Python Core v1.2 installed. Export list and import preview working without overwriting live files.
+2026-06-11 01:44:43 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_014442.tar.gz
+2026-06-11 01:50:31 | import preview extracted /data/data/com.termux/files/home/nova-lang/backups/termux_nova_export_20260611_013725.tar.gz to /data/data/com.termux/files/home/nova-lang/restore-preview/import_20260611_015031
+2026-06-11 01:50:53 | noted: Termux NOVA Python Core v1.2.1 installed. Import preview uses safe tar filter and remains non-destructive.
+2026-06-11 01:50:53 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_015053.tar.gz
+2026-06-11 02:36:32 | noted: Termux NOVA Python Core v1.2.1 installed. Import preview uses safe tar filter and doctor is green.
+2026-06-11 02:36:34 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_023633.tar.gz
+2026-06-11 02:42:23 | sync guide created /data/data/com.termux/files/home/nova-lang/PI5_SYNC_GUIDE.md
+2026-06-11 02:42:23 | manifest created /data/data/com.termux/files/home/nova-lang/UNIVERSAL_DRAGON_MANIFEST.md
+2026-06-11 02:42:23 | sync guide created /data/data/com.termux/files/home/nova-lang/PI5_SYNC_GUIDE.md
+2026-06-11 02:42:23 | pi5 sync pack created /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_024223.tar.gz
+2026-06-11 02:42:33 | noted: Termux NOVA Python Core v1.3 installed. Pi5 sync guide and syncpack created for later migration.
+2026-06-11 02:42:36 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_024235.tar.gz
+2026-06-11 02:43:47 | noted: Termux NOVA Python Core v1.3 installed. Pi5 sync guide and syncpack created for later migration.
+2026-06-11 02:43:50 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_024349.tar.gz
+2026-06-11 02:44:51 | noted: Termux NOVA Python Core v1.3 installed. Pi5 sync guide and syncpack created for later migration.
+2026-06-11 02:44:54 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_024454.tar.gz
+2026-06-11 02:45:15 | synccheck completed /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_024223.tar.gz issues=0
+2026-06-11 02:46:01 | noted: Termux NOVA Python Core v1.3.1 installed. Synccheck verifies Pi5 sync pack contents and doctor label updated.
+2026-06-11 02:46:03 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_024602.tar.gz
+2026-06-11 02:47:40 | manifest created /data/data/com.termux/files/home/nova-lang/UNIVERSAL_DRAGON_MANIFEST.md
+2026-06-11 02:47:40 | sync guide created /data/data/com.termux/files/home/nova-lang/PI5_SYNC_GUIDE.md
+2026-06-11 02:47:40 | pi5 sync pack created /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_024740.tar.gz
+2026-06-11 02:47:40 | synccheck completed /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_024740.tar.gz issues=0
+2026-06-11 02:48:04 | noted: Termux NOVA Python Core v1.3.1 final Pi5 syncpack regenerated and verified.
+2026-06-11 02:48:07 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_024806.tar.gz
+2026-06-11 02:51:27 | manifest created /data/data/com.termux/files/home/nova-lang/UNIVERSAL_DRAGON_MANIFEST.md
+2026-06-11 02:51:27 | sync guide created /data/data/com.termux/files/home/nova-lang/PI5_SYNC_GUIDE.md
+2026-06-11 02:51:27 | pi5 sync pack created /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_025127.tar.gz
+2026-06-11 02:51:27 | synccheck completed /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_025127.tar.gz issues=0
+2026-06-11 02:51:55 | noted: Termux NOVA Python Core v1.3.1 final labels cleaned and Pi5 syncpack verified GREEN.
+2026-06-11 02:51:58 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_025157.tar.gz
+2026-06-11 02:56:20 | noted: Termux NOVA Python Core v1.3.1 pushed to GitHub Universal-Dragon-Core.
+2026-06-11 02:56:22 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_025621.tar.gz
+2026-06-11 10:12:41 | noted: NOVA LINK master key plan created. Remote control will use identity keys, signed commands, allowlist, logs, approval, and rollback for Aslam-owned devices only.
+2026-06-11 10:12:44 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_101244.tar.gz
+2026-06-11 10:12:50 | noted: NOVA LINK master key plan created. Remote control will use identity keys, signed commands, allowlist, logs, approval, and rollback for Aslam-owned devices only.
+2026-06-11 10:12:52 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_101251.tar.gz
+2026-06-11 10:17:07 | noted: NOVA LINK plan fixed. Docs folder created. Travel-mode remote control architecture saved.
+2026-06-11 10:17:09 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_101708.tar.gz
+2026-06-11 10:17:41 | noted: NOVA LINK v0.1 installed in Termux. Mobile commander can create signed command packets for Aslam-owned devices.
+2026-06-11 10:17:42 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_101742.tar.gz
+2026-06-11 10:20:20 | noted: Aslam Moving Control Room history saved. Travel time converted into NOVA LINK build time. Identity-based master key control planned for Aslam-owned devices.
+2026-06-11 10:20:20 | run file /data/data/com.termux/files/home/nova-link/history/aslam_moving_control_room.nova
+2026-06-11 10:20:20 | noted: Aslam Moving Control Room history saved. NOVA LINK v0.1 created signed command packets from mobile Termux while traveling.
+2026-06-11 10:20:20 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_102020.tar.gz
+2026-06-11 10:26:09 | noted: Dragon Field Cable added to mobile control room kit. 100 AED cable reserved for Termux, Pi5 sync, NOVA LINK, emergency power, and field work.
+2026-06-11 10:26:11 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_102610.tar.gz
+2026-06-11 11:10:29 | noted: Curtain fixing work completed. Home Center customized curtain fitting looks good. Ready-made curtain quality and fitting not good compared to custom curtain.
+2026-06-11 11:10:31 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_111030.tar.gz
+2026-06-11 11:13:16 | noted: NOVA Packager starting from stable v1.3.1. Old v1.2 screenshots ignored.
+2026-06-11 11:13:18 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_111317.tar.gz
+2026-06-11 11:17:40 | noted: NOVA local Termux deb package built from stable v1.3.1 after fixing package folder permissions.
+2026-06-11 11:17:42 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_111741.tar.gz
+2026-06-11 11:26:04 | noted: NOVA local apt repository created. pkg install nova now works from local repo.
+2026-06-11 11:26:05 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_112605.tar.gz
+2026-06-11 11:31:37 | noted: NOVA will use Python as the mother engine, but will also use Bash, C, Rust, Node.js and SQLite as internal strong adapters. Goal is one NOVA language face with best tool per job.
+2026-06-11 11:31:38 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_113138.tar.gz
+2026-06-11 11:38:55 | noted: Terminal check paused. which command missing in Termux, use command -v nova instead. NOVA package install is still working.
+2026-06-11 11:38:58 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_113857.tar.gz
+2026-06-11 11:45:49 | noted: NOVA Adapter System v0.1 created. Bash, Python, Node, C, C++, Rust and Java ready. SQLite installing/checking.
+2026-06-11 11:45:51 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_114550.tar.gz
+2026-06-11 11:46:03 | noted: NOVA adapter shortcut installed as novaadapter. Next step is connect it inside main nova command as nova adapter.
+2026-06-11 11:46:04 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_114604.tar.gz
+2026-06-11 11:49:10 | run file /data/data/com.termux/files/home/nova-lang/hello_core.nova
+2026-06-11 11:49:10 | noted: NOVA language file test working after adapter GREEN
+2026-06-11 11:49:26 | noted: NOVA Adapter System GREEN. SQLite ready. nova run expects .nova files. novapy added for direct Python adapter test.
+2026-06-11 11:49:28 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_114927.tar.gz
+2026-06-11 11:55:12 | noted: NOVA QBIT adapter v0.1 created. NOVA now has symbolic qbit language commands: qbit, h, x, z, state, measure.
+2026-06-11 11:55:14 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_115513.tar.gz
+2026-06-11 12:00:48 | noted: NOVA launcher router v1.3.2 installed. Main nova command now routes adapter, py, and qbit engines under one command face.
+2026-06-11 12:00:50 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_120050.tar.gz
+2026-06-11 12:06:15 | noted: NOVA package v1.3.2 built. Local repo now stores router launcher with adapter, py, and qbit engines.
+2026-06-11 12:06:17 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_120616.tar.gz
+2026-06-11 12:09:09 | noted: NOVA local repo cleaned. Old nova_1.0 package removed. Repository now points only to nova v1.3.2 router package.
+2026-06-11 12:09:11 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_120910.tar.gz
+2026-06-11 12:30:47 | run file /data/data/com.termux/files/home/nova-lang/qbit_test.qnova
+2026-06-11 12:32:30 | noted: NOVA Launcher Router v1.3.3 installed. nova run now selects qbit/python/node/bash/sql/nova by header or file extension.
+2026-06-11 12:32:32 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_123231.tar.gz
+2026-06-11 12:51:48 | noted: Universaldragon.com is the public headquarters for Universal Dragon. Goal: portfolio
+2026-06-11 12:52:18 | noted: NOVA package v1.3.3 built. Universal Runner package includes router, py adapter, qbit adapter, adapter checker, and extension based engine routing.
+2026-06-11 12:52:21 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_125220.tar.gz
+2026-06-11 13:41:56 | noted: NOVA v1.3.3 package installed and tested GREEN. Universal Runner now works through dpkg package and local repo candidate check.
+2026-06-11 13:41:59 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_134158.tar.gz
+2026-06-11 13:44:57 | noted: NOVA v1.3.3 milestone complete. Mobile Termux field lab can build local packages, local repo, universal runner, QBIT adapter, Python adapter, and adapter status system.
+2026-06-11 13:44:58 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_134457.tar.gz
+2026-06-11 13:48:05 | noted: NOVA v1.3.3 GitHub sync completed. Package, repo Packages file, adapters, qbit test, and docs copied into ud-github-sync and pushed.
+2026-06-11 13:48:08 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_134807.tar.gz
+2026-06-11 15:32:29 | noted: NOVA v1.3.3 GitHub verification complete. Git clean, commit e4914c5 pushed, package and repo Packages file confirmed.
+2026-06-11 15:32:31 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_153231.tar.gz
+2026-06-11 15:36:46 | noted: NOVA v1.3.3 tagged as nova-v1.3.3 release checkpoint.
+2026-06-11 15:36:49 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_153648.tar.gz
+2026-06-11 15:40:51 | noted: NOVA v1.3.4-dev started from stable tagged v1.3.3. Goal: clean help, notes view, router polish, adapter report, package polish.
+2026-06-11 15:40:53 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_154052.tar.gz
+2026-06-11 15:46:08 | noted: NOVA v1.3.4-dev step 1 complete. Added nova notes and nova help route to launcher.
+2026-06-11 15:46:12 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_154611.tar.gz
+2026-06-11 15:55:19 | noted: NOVA v1.3.4-dev step 2 complete. Router label updated and routes list cleaned.
+2026-06-11 15:55:19 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_155519.tar.gz
+2026-06-11 16:06:39 | noted: NOVA v1.3.4-dev step 3 complete. Doctor now includes adapter status report.
+2026-06-11 16:06:39 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_160639.tar.gz
+2026-06-11 16:19:48 | noted: NOVA architecture rule: Python is mother engine and bootloader, not final identity. NOVA language face controls adapters: qbit, python, bash, node, sqlite, C, Rust, Java. Future goal is NOVA bytecode and stronger Rust/C core.
+2026-06-11 16:19:50 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_161950.tar.gz
+2026-06-11 16:52:36 | noted: NOVA v1.3.4-dev step 4 complete. Version label changed from Python-only core to Multi-Engine Tool-Language Runtime.
+2026-06-11 16:52:37 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_165236.tar.gz
+2026-06-11 17:04:33 | noted: NOVA v1.3.4-dev1 package repo updated and pushed to GitHub.
+2026-06-11 17:04:35 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_170434.tar.gz
+2026-06-11 17:06:30 | noted: NOVA v1.3.4-dev1 tagged after package, repo, GitHub push, doctor, adapter, qbit and py tests GREEN.
+2026-06-11 17:06:33 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_170632.tar.gz
+2026-06-11 17:20:40 | noted: NOVA v1.3.4-dev step 5 complete. Core and doctor labels updated from old v1.3.1 wording.
+2026-06-11 17:20:42 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_172041.tar.gz
+2026-06-11 17:28:41 | noted: NOVA v1.3.5-dev started. Goal: portable public installer and package that works on fresh Termux.
+2026-06-11 17:28:43 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_172842.tar.gz
+2026-06-11 18:08:28 | noted: NOVA v1.3.5-dev2 portable package GREEN. Fresh Termux simulation passed. QBIT, Python, doctor, adapter, auto-init working.
+2026-06-11 18:08:29 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_180828.tar.gz
+2026-06-11 18:08:33 | noted: NOVA v1.3.5-dev2 portable package GREEN. Fresh Termux simulation passed. QBIT, Python, doctor, adapter, auto-init working.
+2026-06-11 18:08:35 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_180834.tar.gz
+2026-06-11 18:41:39 | noted: NOVA v1.3.5-dev2 public repo install confirmed GREEN. pkg install nova works, doctor GREEN, qbit test GREEN.
+2026-06-11 18:41:42 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_184141.tar.gz
+2026-06-11 18:41:55 | noted: NOVA v1.3.5-dev2 public repo install confirmed GREEN. pkg install nova works, doctor GREEN, qbit test GREEN.
+2026-06-11 18:41:58 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_184157.tar.gz
+2026-06-11 20:47:41 | noted: Domain is registered in Cloudflare. Vercel is not domain owner. Safe plan: remove Vercel domains/projects first, keep Cloudflare DNS clean, then delete Vercel account if no longer needed.
+2026-06-11 20:47:43 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_204742.tar.gz
+2026-06-11 20:52:36 | noted: Vercel account deleted. Domain remains safe in Cloudflare. Next step: connect Cloudflare Pages to Universal-Dragon-Core docs for install.universaldragon.com.
+2026-06-11 20:52:38 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_205237.tar.gz
+2026-06-11 20:56:41 | noted: NOVA install index page added for Cloudflare Pages root route.
+2026-06-11 20:56:43 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260611_205642.tar.gz
+2026-06-12 00:34:15 | synccheck completed /data/data/com.termux/files/home/nova-lang/backups/termux_to_pi5_sync_20260611_025127.tar.gz issues=0
+2026-06-12 02:32:55 | noted: NOVA install site LIVE GREEN. Cloudflare Pages project universal-dragon-nova deployed from nova-v1.3.5-dev docs folder. Custom domain https://install.universaldragon.com working.
+2026-06-12 02:32:57 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_023255.tar.gz
+2026-06-12 02:34:53 | noted: NOVA v1.3.5 site-live tag created. install.universaldragon.com is live and GitHub/Cloudflare Pages deployment is clean.
+2026-06-12 02:34:57 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_023456.tar.gz
+2026-06-12 02:40:16 | noted: install.universaldragon.com verified with HTTP/2 200. Cloudflare Pages production domain is GREEN.
+2026-06-12 02:40:20 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_024019.tar.gz
+2026-06-12 04:09:11 | noted: NOVA Language Vision V1 created and pushed. Universal Dragon NOVA will evolve from runtime foundation into a full custom programming language with lexer, parser, interpreter, standard library, QBIT layer, and future compiler path.
+2026-06-12 04:09:12 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_040911.tar.gz
+2026-06-12 04:23:33 | noted: NOVA v2 language engine seed created and pushed. First lexer/parser reads .nova files, recognizes brain, let, say, qbit, h, and measure commands, and outputs AST successfully.
+2026-06-12 04:23:34 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_042333.tar.gz
+2026-06-12 10:21:11 | noted: QBIT gates upgraded and pushed. NOVA v2 now supports state, prob, x, z, reset, h, and measure for symbolic quantum simulation.
+2026-06-12 10:21:13 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_102112.tar.gz
+2026-06-12 10:52:14 | noted: QBIT Z interference test pushed. H-Z-H sequence proved phase interference by converting
+2026-06-12 10:52:16 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_105214.tar.gz
+2026-06-12 10:57:37 | noted: QBIT Z interference test pushed. H-Z-H sequence proved phase interference by converting |0> into |1>, showing that phase can change final measurement through interference.
+2026-06-12 10:57:39 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_105737.tar.gz
+2026-06-12 11:12:58 | noted: QBIT H-Z-H equals X explanation added. The note explains how phase and interference convert |0> into |1>, showing why H-Z-H has the same final effect as X gate.
+2026-06-12 11:12:59 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_111258.tar.gz
+2026-06-12 12:19:08 | noted: QBIT CNOT entanglement simulator added. NOVA v2 now supports multi-qbit register, CNOT gate, Bell-style linked states, and matching measurement results.
+2026-06-12 12:19:09 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_121908.tar.gz
+2026-06-12 12:25:33 | noted: QBIT CNOT Bell state explanation added. The note explains how H on qbit a plus CNOT a b creates a Bell-style linked state where measurement gives 00 or 11.
+2026-06-12 12:25:34 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_122533.tar.gz
+2026-06-12 13:55:03 | noted: QBIT Bell repeat stability test added. The test ran Bell/CNOT measurement 20 times and confirmed only 00 and 11 appeared, with 01 and 10 staying zero.
+2026-06-12 13:55:04 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_135503.tar.gz
+2026-06-12 13:59:05 | noted: GitHub Actions QBIT tests added. NOVA QBIT tests will run automatically on push and pull request for the nova-v1.3.5-dev branch.
+2026-06-12 13:59:06 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_135905.tar.gz
+2026-06-12 18:05:33 | noted: README updated with NOVA QBIT GitHub Actions test badge and CI milestone. Repo front page now shows QBIT automated test status.
+2026-06-12 18:05:35 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_180533.tar.gz
+2026-06-12 18:09:04 | noted: Milestone tag nova-qbit-ci-green-v1 created. This locks NOVA QBIT v2 with CNOT, Bell repeat stability test, GitHub Actions CI, and README badge.
+2026-06-12 18:09:06 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_180905.tar.gz
+2026-06-12 18:36:53 | noted: NOVA v2.2 quantum-first syntax parser added. NOVA now understands intent, simulate, observe, guard, collapse, and QBIT-based decision grammar.
+2026-06-12 18:36:54 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_183653.tar.gz
+2026-06-12 18:46:09 | noted: Quantum-first syntax parser CI test added. GitHub Actions now checks NOVA v2.2 intent, simulate, guard, observe, and collapse syntax parsing.
+2026-06-12 18:46:10 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_184609.tar.gz
+2026-06-12 20:42:29 | noted: Milestone tag nova-v2.2-quantum-syntax-ci-green created. This locks NOVA v2.2 with QBIT simulation, Bell/CNOT proof, repeat stability test, quantum-first syntax parser, and GitHub Actions CI.
+2026-06-12 20:42:30 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_204229.tar.gz
+2026-06-12 21:35:27 | noted: WiFi check: phone connected on local IP 192.168.1.120, frequency 2412 MHz, link speed 175 Mbps, RSSI -38 strong signal, supplicant completed. SSID and BSSID hidden by Android privacy.
+2026-06-12 21:35:30 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260612_213529.tar.gz
+2026-06-19 13:40:39 | noted: NOVA provenance and ownership record added. Creator identity, Universal Dragon branding, QBIT milestone, CI proof, and long-term NOVA engine direction are now documented.
+2026-06-19 13:40:40 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_134039.tar.gz
+2026-06-19 13:44:27 | noted: Milestone tag nova-provenance-v1 created for NOVA ownership and evidence chain record.
+2026-06-19 13:44:28 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_134427.tar.gz
+2026-06-19 13:45:41 | run file examples/v2/qbit_bell_cnot_test.nova
+2026-06-19 13:48:43 | run file examples/v2/qbit_bell_cnot_test.nova
+2026-06-19 13:50:22 | noted: NOVA wrapper patched on Huawei Termux. nova run now routes .nova files to NOVA v2 engine, hiding Python from the user-facing command. QBIT Bell CNOT test passed through nova run.
+2026-06-19 13:50:23 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_135022.tar.gz
+2026-06-19 13:52:34 | noted: NOVA v2 wrapper installer added. Any device can patch nova run to route .nova files through the NOVA v2 engine while keeping NOVA as the user-facing command.
+2026-06-19 13:52:36 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_135234.tar.gz
+2026-06-19 13:54:19 | noted: NOVA v2 wrapper installer added. Any device can patch nova run to route .nova files through the NOVA v2 engine while keeping NOVA as the user-facing command.
+2026-06-19 13:54:21 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_135419.tar.gz
+2026-06-19 14:09:31 | noted: NOVA v2.2 intent syntax added. NOVA now supports intent blocks as the first Quantum-Intent Core language feature.
+2026-06-19 14:09:32 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_140931.tar.gz
+2026-06-19 14:18:43 | noted: NOVA v2.2 simulate block syntax added. NOVA now supports simulate target blocks with when value => result cases.
+2026-06-19 14:18:44 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_141843.tar.gz
+2026-06-19 14:25:53 | noted: NOVA v2.2 observe syntax added. NOVA can now collapse a qbit state into an observed decision value and store it for later guard/if logic.
+2026-06-19 14:25:54 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_142553.tar.gz
+2026-06-19 14:29:17 | noted: NOVA v2.2 guard syntax added. NOVA can now use observed qbit decision values to trigger safe guard actions such as rollback or access allowed messages.
+2026-06-19 14:29:18 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_142917.tar.gz
+2026-06-19 14:30:58 | noted: Milestone tag nova-quantum-intent-core-v1 created. NOVA v2.2 now supports intent, simulate, observe, guard, QBIT, CNOT, and safe decision syntax.
+2026-06-19 14:30:59 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_143058.tar.gz
+2026-06-19 14:42:04 | noted: Life principle locked: Do not lose today by waiting for tomorrow. If today falls, tomorrow can grow again. Do not leave justice because of yesterday’s pain. Move forward. Universal Dragon Aslam can rise.
+2026-06-19 14:42:17 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_144204.tar.gz
+2026-06-19 14:45:11 | noted: Vision principle locked: Since the beginning, humans looked at the sky and asked whether we are alone. Today we speak with AI and imagine virtual worlds. We may not simply go there; those worlds may come here through NOVA and EVE. Universal Dragon Aslam.
+2026-06-19 14:45:12 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_144511.tar.gz
+2026-06-19 14:46:40 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_144639.tar.gz
+2026-06-19 14:48:43 | noted: Aslam workflow memory: Morning 8 AM to 5 PM mostly outside for curtain fixing work. Travel time can be around 5 hours and fixing work around 3 hours. Main working device is Huawei Termux. Raspberry Pi 5 server is used mainly in the room. Sunday is mostly room/Pi5 work day. Default support should prefer Termux first, Pi5 server when Aslam is in the room.
+2026-06-19 14:48:44 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_144843.tar.gz
+2026-06-19 21:43:45 | noted: NOVA Quantum-Intent Core test check added. Local test validates intent, simulate, observe, and guard syntax together.
+2026-06-19 21:43:46 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_214345.tar.gz
+2026-06-19 21:49:00 | noted: GitHub Actions updated to run both QBIT Bell repeat tests and NOVA Quantum-Intent Core tests for intent, simulate, observe, and guard.
+2026-06-19 21:49:01 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_214900.tar.gz
+2026-06-19 21:58:27 | noted: Milestone tag nova-quantum-intent-core-ci-green-v1 created after local and GitHub Actions tests passed for QBIT, Quantum-Intent Core, and quantum-first syntax parser.
+2026-06-19 21:58:28 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260619_215827.tar.gz
+2026-06-20 06:14:50 | noted: NOVA v2 patch syntax added. NOVA can now safely patch project files using patch path { replace old => new } syntax, blocking paths outside the project root.
+2026-06-20 06:14:51 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_061451.tar.gz
+2026-06-20 06:18:48 | noted: Python patching chapter closed. NOVA v2 patch syntax is now working, allowing NOVA to safely patch project files using patch path { replace old => new } syntax. Python remains only as hidden runtime for now.
+2026-06-20 06:18:49 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_061848.tar.gz
+2026-06-20 07:32:08 | noted: NOVA/QBIT WhatsApp voice and call decision example added. NOVA now decides safe call handling with CALL_SAFE_REPLY and OWNER_APPROVAL_REQUIRED branches before Node execution.
+2026-06-20 07:32:09 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_073208.tar.gz
+2026-06-20 07:50:25 | noted: NOVA WhatsApp voice and call decision contract documented. NOVA/QBIT remains the decision brain while Node executes only allowed WhatsApp actions.
+2026-06-20 07:50:26 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_075025.tar.gz
+2026-06-20 12:20:12 | noted: NOVA to Node WhatsApp adapter documented. Node must only execute safe actions based on NOVA/QBIT outputs and must not decide or auto-answer live calls.
+2026-06-20 12:20:13 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_122012.tar.gz
+2026-06-20 12:22:40 | noted: NOVA WhatsApp adapter output example added. NOVA now prints NODE_ACTION outputs for Node bridge execution.
+2026-06-20 12:22:40 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_122240.tar.gz
+2026-06-20 12:28:46 | noted: Milestone locked: NOVA/QBIT language now produces NODE_ACTION outputs and WhatsApp bridge can obey NOVA decisions through adapter v1.
+2026-06-20 12:28:47 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_122846.tar.gz
+2026-06-20 12:39:29 | noted: Proof document added for NOVA/QBIT WhatsApp adapter v1. Verification path now includes GitHub tag, adapter output, safety rules, and pending public demo/video proof.
+2026-06-20 12:39:30 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_123929.tar.gz
+2026-06-20 22:25:50 | noted: Milestone locked: NOVA/QBIT adapter contract v2 now outputs NODE_CHANNEL, NODE_ACTION, NODE_APPROVAL, and NODE_REASON for safe Node execution.
+2026-06-20 22:25:52 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_222551.tar.gz
+2026-06-20 22:33:16 | noted: Milestone locked: NOVA/QBIT adapter contract v3 now outputs channel, action, approval, risk, runtime permission, allowed status, and reason for safe WhatsApp Node execution.
+2026-06-20 22:33:17 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_223316.tar.gz
+2026-06-20 22:43:37 | noted: Milestone locked: NOVA/QBIT Universal Adapter Contract v1 outputs safe adapter execution fields and blocks raw runtime execution.
+2026-06-20 22:43:38 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_224337.tar.gz
+2026-06-20 22:44:51 | noted: NOVA/QBIT Language Specification v0.3 added with core keywords, adapter contract fields, safety rules, proof examples, and version file.
+2026-06-20 22:44:52 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_224451.tar.gz
+2026-06-20 22:46:24 | noted: NOVA/QBIT Grammar v0.3 added with program structure, statements, qbit syntax, simulate, observe, guard, patch, and adapter contract output grammar.
+2026-06-20 22:46:25 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_224624.tar.gz
+2026-06-20 22:48:41 | noted: NOVA/QBIT adapter contract tests added. WhatsApp contract v3 and Universal Adapter contract v1 are now automatically verified.
+2026-06-20 22:48:42 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_224841.tar.gz
+2026-06-20 22:52:32 | noted: NOVA/QBIT adapter contract tests added to GitHub Actions CI. WhatsApp contract v3 and Universal Adapter contract v1 now run in automated CI.
+2026-06-20 22:52:33 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_225232.tar.gz
+2026-06-20 22:58:15 | noted: README updated with NOVA/QBIT Language v0.3 overview, keywords, adapter contract fields, examples, tests, spec files, and safety direction.
+2026-06-20 22:58:17 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_225815.tar.gz
+2026-06-20 23:24:19 | noted: NOVA/QBIT v0.3 release manifest locked. This milestone includes spec, grammar, version, examples, adapter contracts, tests, CI, README, and tags.
+2026-06-20 23:24:20 | backup created /data/data/com.termux/files/home/nova-lang/backups/backup_20260620_232419.tar.gz
